@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Web colegio</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    *{
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+    }
+
+    header{
+        display:flex;
+        background-color: #D91616;
+         overflow: auto;
+         color:white;
+         font-family: sans-serif;
+         
+    }
+
+    span{
+        text-align:center;
+    }
+
+    header .direccion{
+
+    }
+
+    header .telefono{
+        
+    }
+
+   span .material-icons{
+          width:1%;
+   }
+    .menu{
+        display:inline;
+    }
+
+    .menu a{
+        text-decoration: none;
+        color:gray;
+    }
+
+    .menu .selected{
+        border-radius:50px;
+        background-color: #50C9FD;
+        color:white;
+    }
+    
+    .contenedor{
+        display: flex;
+        background-color: white;
+        font-weight: bold;
+        color: #3aa8b5;
+        align-items: center;
+    }
+    .contenedor .nombre{
+        padding:20px;
+
+    }
+
+    .contenedor .menuhamburguesa{
+        display:none;
+
+    }
+    .fa {
+        margin: 5px 2px;
+        width: 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+        color:#D91616;
+        background-color:white
+    }
+
+
+    .fa-twitter {
+        color:#D91616;
+        background-color:white
+    }
+    .fa-instagram {
+        color:#D91616;
+        background-color:white
+    }
+    .fa-youtube {
+        color:#D91616;
+        background-color:white
+    }
+    .fa-telegram{
+        color:#D91616;
+        background-color:white
+    }
+    .redes{
+        padding-left:40%;
+    }
+    main{
+        display: 
+    }
+    @media screen and (max-width:600px){
+        .contenedor .menuhamburguesa{
+            display:none;
+        }
+
+    }
+</style>
+
+<body>
+<header>
+
+    <div class=direccion>
+    <span class="material-icons">location_on</span>
+    Calle Puente Colgante,75 47006, Valladolid
+    </div>
+    <div class=telefono>
+    <span class="material-icons">phone</span>
+    983 234 705
+    </div>
+    <div class=correo>
+    <span class="material-icons">email</span>
+    info@agustinava.net
+    </div>
+    <div class=redes>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-telegram"></a>
+    </div>
+</header>
+
+<div class=contenedor>
+    <button class="menuhamburguesa" onclick="openNav()">
+            <span class="material-icons">menu</span>
+    </button>
+    <div class=nombre>
+    Colegio angustias
+    </div>
+    <div class=menu>
+        <a href="#">NOSOTROS</a>
+        <a href="#">PROPONEMOS</a>
+        <a href="#">OFRECEMOS</a>
+        <a href="#">AL DÍA</a>
+        <a href="#">CONTACTO</a>
+        <a href="#"class=selected>ÁREA PRIVADA</a>
+  </div>
+</div>
+
+<main>
+<div class=primero>
+<h1>Una comunidad educativa
+</div>
+<div class=segundo>
+<h1>Etapas educativas
+</div>
+<div class=tercero>
+<h1>Qué te ofrecemos
+</div>
+<div class=cuarto>
+<h1>Actualidad
+</div>
+<div class=quinto>
+<h1>Solicitar información
+</div>
+</main>
+<footer>
+<h1>Contacta con nosotros</h1>
+</footer>
+
+</body>
+<script>
+        function openNav() {
+            document.getElementById("menu").style.left = "0px";
+        }
+    </script>
+</html>
