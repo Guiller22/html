@@ -13,6 +13,8 @@
         box-sizing: border-box;
         margin:0;
         padding:0;
+        margin-left: auto;
+        margin-right: auto
     }
 
     header{
@@ -46,6 +48,7 @@
     .menu a{
         text-decoration: none;
         color:gray;
+        padding:2px;
     }
 
     .menu .selected{
@@ -107,6 +110,55 @@
     .redes{
         padding-left:40%;
     }
+    .imagencentral{
+        display:inline-block;
+        position:relative;
+    }
+   .imagencentral a{
+        position: absolute;
+        bottom:5cm;
+        left:8cm;
+        background-color:#50C9FD;
+        border-radius:1.5em;
+        color:white;
+        text-transform:uppercase;
+        padding:1em 1.5em;
+}
+.imagencentral p1{
+        position: absolute;
+        bottom:1cm;
+        color:blue;
+        border-radius:1.5em;
+        color:white;
+        text-transform:uppercase;
+
+}
+    .primero{
+       
+        width:95%;
+        height:50%;
+    }
+     .titulo1{
+        color: #D91616;
+        text-align:center;
+        padding: 15px;
+
+    }
+    .imagen2 img{
+        height:50%;
+        width:50%;
+        float:left;
+        padding-right: 25px;
+    }
+    video{
+            height: 25%;
+    width: 50%;
+    padding-left: 40px;
+    padding-top: 5px
+    }
+    .texto h1 {
+    color: #50C9FD;
+}
     main{
         display: 
     }
@@ -117,8 +169,8 @@
 
     }
 </style>
-
 <body>
+
 <header>
 
     <div class=direccion>
@@ -160,8 +212,26 @@
 </div>
 
 <main>
+<div class=imagencentral>
+<p class=p1>Curso 2021</p>
+<p>Libros de texto</p>
+<a href=# alt="Consulta el listado">Consulta el listado</a>
+<img src="img/imagen1.jpg"></img>
+</div>
+<h1 class=titulo1>Una comunidad educativa</h1>
 <div class=primero>
-<h1>Una comunidad educativa
+
+<div class=contenido1>
+    <div class=imagen2><img src=img/imagen2.jpg>
+    <div class=texto><h1>Educar para el estudio , la reflexion y la interioridad</h1>
+    <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
+    </div>
+    <div class=video><video controls>
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+    </video>
+    </div>
 </div>
 <div class=segundo>
 <h1>Etapas educativas
