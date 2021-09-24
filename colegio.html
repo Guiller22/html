@@ -525,7 +525,7 @@
 
     .ant,
     .sig {
-        position: absolute;
+        position: relative;
         width: auto;
         padding: 10px;
         color: white;
@@ -534,20 +534,52 @@
         width: 40px;
         border-radius: 50%;
         text-align: center;
-        top: 340%;
-        left: 20%;
+        bottom: 160px;
+        right: -50px;
     }
 
 
     .sig {
-        right: 0;
+        left: 1400px;
         width: 40px;
         border-radius: 50%;
         text-align: center;
     }
 
     .contenedorImagen {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .textoDebajo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textoDebajo p {
+        color: #3aa8b5;
+        font-weight: bold;
+        padding: 10px;
+        font-size: large;
+    }
+
+    .contenedorAbajo {
+        display: flex;
+        flex-direction: row;
+    }
+    .contenido1{
+        display: flex;
+        flex-direction: column;
         width: 50%;
+        
+    }
+    .formulario{
+        width: 50%;
+    }
+
+    .redes2 {
+        margin-top: 5px;
     }
 
     @media screen and (max-width:600px) {
@@ -644,9 +676,7 @@
 
             <div class=contenido1>
                 <div class=imagen2>
-                    <img src=img/colegio.jpg>
-                </div>
-                <div class="textoImagen">
+                    <img src=img/colegio.jpg> </div> <div class="textoImagen">
                     <div class=texto>
                         <h1>Educar para el estudio , la reflexion y la interioridad</h1>
                         <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem
@@ -654,167 +684,208 @@
                             ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
                     </div>
                     <div class=imagen3>
-                        <img src=img/conocee.jpg>
+                        <img src=img/conocee.jpg> </div> </div> </div> </div> <h1 class=titulo3>Etapas educativas</h1>
+                        <div class=segundo>
+
+                            <div class="guarderia">
+                                <div class="iconoGuarderia"><img src="img/guarderia.png">
+                                </div>
+                                <h1>Guarderia</h1>
+                                <p>Primer ciclo</p>
+                                <div class="botonCursos"><button>Saber mas</button></div>
+                            </div>
+                            <div class="infantil">
+                                <div class="iconoGuarderia"><img src="img/guarderia.png">
+                                </div>
+                                <h1>Infantil</h1>
+                                <p>Segundo ciclo</p>
+                                <div class="botonCursos"><button>Saber mas</button></div>
+                            </div>
+                            <div class="primaria">
+                                <div class="iconoGuarderia"><img src="img/guarderia.png">
+                                </div>
+                                <h1>Primaria</h1>
+                                <p>Tercer ciclo</p>
+                                <div class="botonCursos"><button>Saber mas</button></div>
+                            </div>
+                            <div class="secundaria">
+                                <div class="iconoGuarderia"><img src="img/guarderia.png">
+                                </div>
+                                <h1>Secundaria</h1>
+                                <p>Cuarto ciclo</p>
+                                <div class="botonCursos"><button>Saber mas</button></div>
+                            </div>
+
+                            <div class="bachiller">
+                                <div class="iconoGuarderia"><img src="img/guarderia.png">
+                                </div>
+                                <h1>Bachiller</h1>
+
+                                <p>Quinto ciclo</p>
+                                <div class="botonCursos"><button>Saber mas</button></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class=tercero>
+                                <div class="primeraFila">
+                                    <img src="img/niños1.jpg">
+                                    <img src="img/niños2.jpg">
+                                    <img src="img/niños3.jpg">
+                                    <img src="img/niños4.jpg">
+                                </div>
+                                <div class="segundaFila">
+                                    <img src="img/niños5.jpg">
+                                    <img src="img/niños6.jpg">
+                                    <img src="img/niños7.jpg">
+                                    <img src="img/niños8.jpg">
+                                </div>
+
+                            </div>
+                            <h1 class=titulo3>Qué te ofrecemos</h1>
+                            <div class="row">
+                                <div class="col col-25">
+                                    <div class="tienda">
+                                        <div class="iconoTienda"><img src="img/tienda.png">
+                                        </div>
+                                        <div></div>
+                                        <h1>Tienda online</h1>
+                                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                                        <div class="botonCursos"><button>Saber mas</button></div>
+                                    </div>
+                                </div>
+                                <div class="col col-25">
+                                    <div class="innovacion">
+                                        <div class="iconoInnovacion"><img src="img/tienda.png">
+                                        </div>
+                                        <h1>Planes de innovacion</h1>
+                                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                                        <div class="botonCursos"><button>Saber mas</button></div>
+                                    </div>
+                                </div>
+                                <div class="col col-25">
+                                    <div class="madrugadores">
+                                        <div class="iconoMadrugadores"><img src="img/tienda.png">
+                                        </div>
+                                        <h1>Tienda</h1>
+                                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                                        <div class="botonCursos"><button>Saber mas</button></div>
+                                    </div>
+                                </div>
+                                <div class="col col-25">
+                                    <div class="comedor">
+                                        <div class="iconoComedor"><img src="img/tienda.png">
+                                        </div>
+                                        <h1>Comedor escolar</h1>
+                                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                                        <div class="botonCursos"><button>Saber mas</button></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col col-25">
+                                    <div class="actividades">
+                                        <div class="iconoActividades"><img src="img/tienda.png">
+                                        </div>
+                                        <h1>Actividades extraescolares</h1>
+                                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                                        <div class="botonCursos"><button>Saber mas</button></div>
+                                    </div>
+                                </div>
+                                <div class="col col-25">
+                                    <div class="pastoral">
+                                        <div class="iconoPastoral"><img src="img/tienda.png">
+                                        </div>
+                                        <h1>Pastoral</h1>
+                                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                                        <div class="botonCursos"><button>Saber mas</button></div>
+                                    </div>
+                                </div>
+                                <div class="col col-25">
+                                    <div class="bilinguismo">
+                                        <div class="iconoBilinguismo"><img src="img/tienda.png">
+                                        </div>
+                                        <h1>Bilingüismo</h1>
+                                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                                        <div class="botonCursos"><button>Saber mas</button></div>
+                                    </div>
+                                </div>
+                                <div class="col col-25">
+                                    <div class="plataforma">
+                                        <div class="iconoPlataforma"><img src="img/tienda.png">
+                                        </div>
+                                        <h1>Plataforma educativa</h1>
+                                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                                        <div class="botonCursos"><button>Saber mas</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class=quinto>
+                    <h1 class="titulo2">Actualidad<h1></h1>
+                </div>
+                <div class="contenedorImagen">
+
+                    <div class="textoDebajo">
+                        <img src="img/imagen3.jpg" style="width:100%">
+                        <p>Admirable!</p>
+                    </div>
+                    <div class="textoDebajo">
+                        <img src="img/imagen4.jpg" style="width:100%">
+                        <p>Escuela de Idiomas - International House</p>
+                    </div>
+
+                    <div class="textoDebajo">
+                        <img src="img/imagen5.jpg" style="width:100%">
+
+                        <p>100% aprobados en la EBAU de junio</p>
+                    </div>
+
+                </div>
+                <a class="ant">&#10094;</a>
+                <a class="sig">&#10095;</a>
             </div>
         </div>
-        <h1 class=titulo3>Etapas educativas</h1>
-        <div class=segundo>
-
-            <div class="guarderia">
-                <div class="iconoGuarderia"><img src="img/guarderia.png">
-                </div>
-                <h1>Guarderia</h1>
-                <p>Primer ciclo</p>
-                <div class="botonCursos"><button>Saber mas</button></div>
-            </div>
-            <div class="infantil">
-                <div class="iconoGuarderia"><img src="img/guarderia.png">
-                </div>
-                <h1>Infantil</h1>
-                <p>Segundo ciclo</p>
-                <div class="botonCursos"><button>Saber mas</button></div>
-            </div>
-            <div class="primaria">
-                <div class="iconoGuarderia"><img src="img/guarderia.png">
-                </div>
-                <h1>Primaria</h1>
-                <p>Tercer ciclo</p>
-                <div class="botonCursos"><button>Saber mas</button></div>
-            </div>
-            <div class="secundaria">
-                <div class="iconoGuarderia"><img src="img/guarderia.png">
-                </div>
-                <h1>Secundaria</h1>
-                <p>Cuarto ciclo</p>
-                <div class="botonCursos"><button>Saber mas</button></div>
-            </div>
-
-            <div class="bachiller">
-                <div class="iconoGuarderia"><img src="img/guarderia.png">
-                </div>
-                <h1>Bachiller</h1>
-
-                <p>Quinto ciclo</p>
-                <div class="botonCursos"><button>Saber mas</button></div>
-            </div>
-        </div>
-        <div>
-            <div class=tercero>
-                <div class="primeraFila">
-                    <img src="img/niños1.jpg">
-                    <img src="img/niños2.jpg">
-                    <img src="img/niños3.jpg">
-                    <img src="img/niños4.jpg">
-                </div>
-                <div class="segundaFila">
-                    <img src="img/niños5.jpg">
-                    <img src="img/niños6.jpg">
-                    <img src="img/niños7.jpg">
-                    <img src="img/niños8.jpg">
-                </div>
-
-            </div>
-            <h1 class=titulo3>Qué te ofrecemos</h1>
-            <div class="row">
-                <div class="col col-25">
-                    <div class="tienda">
-                        <div class="iconoTienda"><img src="img/tienda.png">
-                        </div>
-                        <div></div>
-                        <h1>Tienda online</h1>
-                        <p>Accede a nuestra tienda y compra lo que necesites</p>
-                        <div class="botonCursos"><button>Saber mas</button></div>
+        <h1 class="titulo2">Solicita información</h1>
+        <div class="sexto">
+            <div class="contenedorAbajo">
+                <div class="contenido1">
+                    <div class=direccion>
+                        <span class="material-icons">location_on</span>
+                        <p>Calle Puente Colgante,75 47006, Valladolid</p>
+                    </div>
+                    <div class=telefono>
+                        <span class="material-icons">phone</span>
+                        <p>983 234 705</p>
+                    </div>
+                    <div class=correo>
+                        <span class="material-icons">email</span>
+                        <p>info@agustinava.net</p>
+                    </div>
+                    <div class=redes2>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-telegram"></a>
+                    </div>
+                    <div class="mapa">
+                        <img src="img/mapa.jpg" style="width:100%">
                     </div>
                 </div>
-                <div class="col col-25">
-                    <div class="innovacion">
-                        <div class="iconoInnovacion"><img src="img/tienda.png">
-                        </div>
-                        <h1>Planes de innovacion</h1>
-                        <p>Accede a nuestra tienda y compra lo que necesites</p>
-                        <div class="botonCursos"><button>Saber mas</button></div>
-                    </div>
-                </div>
-                <div class="col col-25">
-                    <div class="madrugadores">
-                        <div class="iconoMadrugadores"><img src="img/tienda.png">
-                        </div>
-                        <h1>Tienda</h1>
-                        <p>Accede a nuestra tienda y compra lo que necesites</p>
-                        <div class="botonCursos"><button>Saber mas</button></div>
-                    </div>
-                </div>
-                <div class="col col-25">
-                    <div class="comedor">
-                        <div class="iconoComedor"><img src="img/tienda.png">
-                        </div>
-                        <h1>Comedor escolar</h1>
-                        <p>Accede a nuestra tienda y compra lo que necesites</p>
-                        <div class="botonCursos"><button>Saber mas</button></div>
-                    </div>
+                <div class="formulario">
+                    <form>
+                        Nombre<input type="text" id="nombre"></input><br>
+                        Correo eléctronico<input type="correo" id="correo" name="correo"><br>
+                        Teléfono<input type="number" id="tlf" name="tlf">
+                        Consulta<input type="text" id="consulta" name="consulta">
+                        <input type="checkbox" id="terminos" name="terminos">Términos y condiciones
+                        <input type="submit" value="Submit">
+                    </form>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col col-25">
-                    <div class="actividades">
-                        <div class="iconoActividades"><img src="img/tienda.png">
-                        </div>
-                        <h1>Actividades extraescolares</h1>
-                        <p>Accede a nuestra tienda y compra lo que necesites</p>
-                        <div class="botonCursos"><button>Saber mas</button></div>
-                    </div>
-                </div>
-                <div class="col col-25">
-                    <div class="pastoral">
-                        <div class="iconoPastoral"><img src="img/tienda.png">
-                        </div>
-                        <h1>Pastoral</h1>
-                        <p>Accede a nuestra tienda y compra lo que necesites</p>
-                        <div class="botonCursos"><button>Saber mas</button></div>
-                    </div>
-                </div>
-                <div class="col col-25">
-                    <div class="bilinguismo">
-                        <div class="iconoBilinguismo"><img src="img/tienda.png">
-                        </div>
-                        <h1>Bilingüismo</h1>
-                        <p>Accede a nuestra tienda y compra lo que necesites</p>
-                        <div class="botonCursos"><button>Saber mas</button></div>
-                    </div>
-                </div>
-                <div class="col col-25">
-                    <div class="plataforma">
-                        <div class="iconoPlataforma"><img src="img/tienda.png">
-                        </div>
-                        <h1>Plataforma educativa</h1>
-                        <p>Accede a nuestra tienda y compra lo que necesites</p>
-                        <div class="botonCursos"><button>Saber mas</button></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-        <div class=quinto>
-            <h1 class="titulo2">Actualidad<h1></h1>
-        </div>
-        <div class="contenedorImagen">
-            <a class="ant">&#10094;</a>
-            <a class="sig">&#10095;</a>
-
-            <img src="img/imagen1.jpg" style="width:100%">
-
-            <div class="mySlides fade">
-                <img src="img/imagen2.jpg" style="width:100%">
-
-            </div>
-
-        </div>
-
-
         </div>
     </main>
     <footer>
