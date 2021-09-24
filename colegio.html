@@ -30,19 +30,11 @@
 
     }
 
-    span {
-        text-align: center;
-    }
-
-
-    span .material-icons {
-        width: 1%;
-    }
 
     .menu {
         display: inline;
         flex-grow: 7.5;
-        margin:10px 10px 10px 10px;
+        margin: 10px 10px 10px 10px;
     }
 
     .menu a {
@@ -68,11 +60,20 @@
     .contenedor .nombre {
         padding: 20px;
         flex-grow: 2.5;
-        
+
     }
-    .nombre img{
+
+    .textoImagen {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        text-align: justify;
+    }
+
+    .nombre img {
         width: 50%;
     }
+
     .contenedor .menuhamburguesa {
         display: none;
 
@@ -80,10 +81,11 @@
 
     .fa {
         margin: 5px 2px;
-        width: 20px;
+        width: 15px;
         text-align: center;
         text-decoration: none;
         border-radius: 50%;
+        object-fit: contain;
     }
 
     .fa:hover {
@@ -157,9 +159,38 @@
     }
 
     .primero {
+        position: relative;
+        margin: 10px;
 
-        width: 95%;
-        height: 50%;
+    }
+    .direccion{
+        margin-top: 5px;
+    }
+    .direccion p{
+        float: right;
+        margin-top: 4px;
+    }
+    .correo{
+        margin-top: 5px;
+    }
+    .correo p{
+        float: right;
+        margin-top: 4px;
+    }
+    .telefono{
+        margin-top: 5px;
+    }
+    .telefono p{
+        float: right;
+        margin-top: 4px;
+    }
+    .redes{
+        margin-top: 5px;
+    }
+
+    .contenido1 {
+        display: flex;
+        flex-direction: row;
     }
 
     .titulo1 {
@@ -169,18 +200,29 @@
 
     }
 
-    .imagen2 img {
-        height: 50%;
-        width: 50%;
-        float: left;
-        padding-right: 25px;
+    .titulo2 {
+        color: #D91616;
+        text-align: center;
+        padding: 15px;
+
     }
 
-    video {
-        height: 25%;
+    .imagen2 {
         width: 50%;
-        padding-left: 40px;
-        padding-top: 5px
+    }
+
+    .imagen2 img {
+        object-fit: contain;
+        width: 100%;
+        padding-right: 25px;
+    }
+    .imagen3{
+        position: absolute;
+        bottom: 0;
+    }
+    .imagen3 img {
+        width: 100%;
+        
     }
 
     .texto h1 {
@@ -197,29 +239,328 @@
         color: red;
     }
 
-        @media screen and (max-width:600px) {
-            .contenedor .menuhamburguesa {
-                display: none;
-            }
+    .segundo {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
 
+    .segundo .guarderia {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .guarderia img {
+        width: 15%;
+    }
+
+    .segundo .primaria {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .infantil {
+        border-left: 2px rgba(121, 121, 121, 0.5) dashed;
+        border-right: 2px rgba(121, 121, 121, 0.5) dashed;
+    }
+
+    .infantil img {
+        width: 15%;
+    }
+
+    .segundo .infantil {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .primaria img {
+        width: 15%;
+    }
+
+    .primaria {
+
+        border-right: 2px rgba(121, 121, 121, 0.5) dashed;
+    }
+
+    .secundaria {
+
+        border-right: 2px rgba(121, 121, 121, 0.5) dashed;
+
+    }
+
+    .segundo .secundaria {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .secundaria img {
+        width: 15%;
+    }
+
+    .segundo .bachiller {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bachiller img {
+        width: 15%;
+    }
+
+    .botonCursos button {
+        background-color: rgb(39, 87, 190);
+        color: white;
+        border-radius: 7px;
+        padding: 2px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+    }
+
+    .tercero {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 10%;
+
+    }
+
+    .tercero img {
+        width: 20%;
+    }
+
+    .primeraFila {
+        flex-direction: row;
+        flex: 1;
+    }
+
+    .segundaFila {
+        flex-direction: row;
+        flex: 2;
+    }
+
+    .cuarto {
+        width: 95%;
+        text-align: center;
+    }
+
+    .cuarto img {
+        width: 10%;
+
+    }
+
+    .fila1 {
+        display: flex;
+        flex-direction: row;
+        width: 65%;
+
+
+
+    }
+
+
+
+    .fila2 {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+
+
+
+    }
+
+
+
+
+    .tienda p {
+        font-size: small;
+    }
+
+    .innovacion p {
+        font-size: small;
+    }
+
+    .madrugadores p {
+        font-size: small;
+    }
+
+    .comedor p {
+        font-size: small;
+    }
+
+    .actividades p {
+        font-size: small;
+    }
+
+    .pastoral p {
+        font-size: small;
+    }
+
+    .bilinguismo p {
+        font-size: small;
+    }
+
+    .plataforma p {
+        font-size: small;
+    }
+
+    .titulo3 {
+        color: #D91616;
+        text-align: center;
+        padding: 15px;
+    }
+
+
+
+
+
+    /* GENERAL GRID STYLES */
+
+    .col {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 980px) {
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
         }
+
+        .col {
+            flex: 1;
+        }
+
+        .col-05 {
+            flex: 0.5;
+        }
+
+        .col-10 {
+            flex: 1;
+        }
+
+        .col-15 {
+            flex: 1.5;
+        }
+
+        .col-20 {
+            flex: 2;
+        }
+
+        .col-25 {
+            flex: 2.5;
+        }
+
+        .col-30 {
+            flex: 3;
+        }
+
+        .col-35 {
+            flex: 3.5;
+        }
+
+        .col-40 {
+            flex: 4;
+        }
+
+        .col-45 {
+            flex: 4.5;
+        }
+
+        .col-50 {
+            flex: 5;
+        }
+
+        .col-55 {
+            flex: 5.5;
+        }
+
+        .col-60 {
+            flex: 6;
+        }
+
+        .col-65 {
+            flex: 6.5;
+        }
+
+        .col-70 {
+            flex: 7;
+        }
+
+        .col-75 {
+            flex: 7.5;
+        }
+
+        .col-80 {
+            flex: 8;
+        }
+
+        .col-85 {
+            flex: 8.5;
+        }
+
+        .col-90 {
+            flex: 9;
+        }
+
+        .col-95 {
+            flex: 9.5;
+        }
+    }
+
+    .ant,
+    .sig {
+        position: absolute;
+        width: auto;
+        padding: 10px;
+        color: white;
+        background-color: red;
+        font-weight: bold;
+        width: 40px;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+
+    .sig {
+        right: 0;
+        width: 40px;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .contenedorImagen {
+        width: 50%;
+    }
+
+    @media screen and (max-width:600px) {
+        .contenedor .menuhamburguesa {
+            display: none;
+        }
+
+    }
 </style>
 
 <body>
 
     <header>
-
         <div class=direccion>
             <span class="material-icons">location_on</span>
-            Calle Puente Colgante,75 47006, Valladolid
+            <p>Calle Puente Colgante,75 47006, Valladolid</p>
         </div>
         <div class=telefono>
             <span class="material-icons">phone</span>
-            983 234 705
+            <p>983 234 705</p>
         </div>
         <div class=correo>
             <span class="material-icons">email</span>
-            info@agustinava.net
+            <p>info@agustinava.net</p>
         </div>
         <div class=redes>
             <a href="#" class="fa fa-facebook"></a>
@@ -274,7 +615,6 @@
                 <button href=# alt="Consulta el listado">Consulta el listado</button>
             </div>
 
-            <!-- Left and right controls -->
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
                 <span class="sr-only">Previous</span>
@@ -292,40 +632,185 @@
         <div class=primero>
 
             <div class=contenido1>
-                <div class=imagen2><img src=img/imagen2.jpg> <div class=texto>
-                    <h1>Educar para el estudio , la reflexion y la interioridad</h1>
-                    <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum
-                        ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
+                <div class=imagen2>
+                    <img src=img/colegio.jpg>
                 </div>
-                <div class=video><video controls>
-                        <source src="movie.mp4" type="video/mp4">
-                        <source src="movie.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="textoImagen">
+                    <div class=texto>
+                        <h1>Educar para el estudio , la reflexion y la interioridad</h1>
+                        <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem
+                            Ipsum
+                            ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
+                    </div>
+                    <div class=imagen3>
+                        <img src=img/conocee.jpg>
+                    </div>
                 </div>
             </div>
-            <div class=segundo>
-                <h1>Etapas educativas
+        </div>
+        <h1 class=titulo3>Etapas educativas</h1>
+        <div class=segundo>
+
+            <div class="guarderia">
+                <div class="iconoGuarderia"><img src="img/guarderia.png">
+                </div>
+                <h1>Guarderia</h1>
+                <p>Primer ciclo</p>
+                <div class="botonCursos"><button>Saber mas</button></div>
             </div>
+            <div class="infantil">
+                <div class="iconoGuarderia"><img src="img/guarderia.png">
+                </div>
+                <h1>Infantil</h1>
+                <p>Segundo ciclo</p>
+                <div class="botonCursos"><button>Saber mas</button></div>
+            </div>
+            <div class="primaria">
+                <div class="iconoGuarderia"><img src="img/guarderia.png">
+                </div>
+                <h1>Primaria</h1>
+                <p>Tercer ciclo</p>
+                <div class="botonCursos"><button>Saber mas</button></div>
+            </div>
+            <div class="secundaria">
+                <div class="iconoGuarderia"><img src="img/guarderia.png">
+                </div>
+                <h1>Secundaria</h1>
+                <p>Cuarto ciclo</p>
+                <div class="botonCursos"><button>Saber mas</button></div>
+            </div>
+
+            <div class="bachiller">
+                <div class="iconoGuarderia"><img src="img/guarderia.png">
+                </div>
+                <h1>Bachiller</h1>
+
+                <p>Quinto ciclo</p>
+                <div class="botonCursos"><button>Saber mas</button></div>
+            </div>
+        </div>
+        <div>
             <div class=tercero>
-                <h1>Qué te ofrecemos
+                <div class="primeraFila">
+                    <img src="img/niños1.jpg">
+                    <img src="img/niños2.jpg">
+                    <img src="img/niños3.jpg">
+                    <img src="img/niños4.jpg">
+                </div>
+                <div class="segundaFila">
+                    <img src="img/niños5.jpg">
+                    <img src="img/niños6.jpg">
+                    <img src="img/niños7.jpg">
+                    <img src="img/niños8.jpg">
+                </div>
+
             </div>
-            <div class=cuarto>
-                <h1>Actualidad
+            <h1 class=titulo3>Qué te ofrecemos</h1>
+            <div class="row">
+                <div class="col col-25">
+                    <div class="tienda">
+                        <div class="iconoTienda"><img src="img/tienda.png">
+                        </div>
+                        <div></div>
+                        <h1>Tienda online</h1>
+                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                        <div class="botonCursos"><button>Saber mas</button></div>
+                    </div>
+                </div>
+                <div class="col col-25">
+                    <div class="innovacion">
+                        <div class="iconoInnovacion"><img src="img/tienda.png">
+                        </div>
+                        <h1>Planes de innovacion</h1>
+                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                        <div class="botonCursos"><button>Saber mas</button></div>
+                    </div>
+                </div>
+                <div class="col col-25">
+                    <div class="madrugadores">
+                        <div class="iconoMadrugadores"><img src="img/tienda.png">
+                        </div>
+                        <h1>Tienda</h1>
+                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                        <div class="botonCursos"><button>Saber mas</button></div>
+                    </div>
+                </div>
+                <div class="col col-25">
+                    <div class="comedor">
+                        <div class="iconoComedor"><img src="img/tienda.png">
+                        </div>
+                        <h1>Comedor escolar</h1>
+                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                        <div class="botonCursos"><button>Saber mas</button></div>
+                    </div>
+                </div>
             </div>
-            <div class=quinto>
-                <h1>Solicitar información
+
+            <div class="row">
+                <div class="col col-25">
+                    <div class="actividades">
+                        <div class="iconoActividades"><img src="img/tienda.png">
+                        </div>
+                        <h1>Actividades extraescolares</h1>
+                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                        <div class="botonCursos"><button>Saber mas</button></div>
+                    </div>
+                </div>
+                <div class="col col-25">
+                    <div class="pastoral">
+                        <div class="iconoPastoral"><img src="img/tienda.png">
+                        </div>
+                        <h1>Pastoral</h1>
+                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                        <div class="botonCursos"><button>Saber mas</button></div>
+                    </div>
+                </div>
+                <div class="col col-25">
+                    <div class="bilinguismo">
+                        <div class="iconoBilinguismo"><img src="img/tienda.png">
+                        </div>
+                        <h1>Bilingüismo</h1>
+                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                        <div class="botonCursos"><button>Saber mas</button></div>
+                    </div>
+                </div>
+                <div class="col col-25">
+                    <div class="plataforma">
+                        <div class="iconoPlataforma"><img src="img/tienda.png">
+                        </div>
+                        <h1>Plataforma educativa</h1>
+                        <p>Accede a nuestra tienda y compra lo que necesites</p>
+                        <div class="botonCursos"><button>Saber mas</button></div>
+                    </div>
+                </div>
             </div>
+        </div>
+        </div>
+        </div>
+        <div class=quinto>
+            <h1 class="titulo2">Actualidad<h1></h1>
+        </div>
+        <div class="contenedorImagen">
+            <a class="ant">&#10094;</a>
+            <a class="sig">&#10095;</a>
+
+            <img src="img/imagen1.jpg" style="width:100%">
+
+            <div class="mySlides fade">
+                <img src="img/imagen2.jpg" style="width:100%">
+
+            </div>
+
+
+
+
+        </div>
     </main>
     <footer>
         <h1>Contacta con nosotros</h1>
     </footer>
 
 </body>
-<script>
-    function openNav() {
-        document.getElementById("menu").style.left = "0px";
-    }
-</script>
+
 
 </html>
