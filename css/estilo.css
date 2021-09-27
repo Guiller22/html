@@ -47,7 +47,12 @@ header {
     flex-grow: 2.5;
 
 }
+@media screen and (max-width:600px) {
+    .contenedor .menuhamburguesa {
+        display: none;
+    }
 
+}
 
 
 .nombre img {
@@ -236,7 +241,6 @@ header {
 
 .segundo {
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: row;
 }
 
@@ -244,6 +248,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 20%;
 }
 
 .guarderia img {
@@ -254,6 +259,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 20%;
 }
 
 .infantil {
@@ -269,6 +275,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 20%;
 }
 
 .primaria img {
@@ -290,6 +297,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 20%;
 }
 
 .secundaria img {
@@ -300,6 +308,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 20%;
 }
 
 .bachiller img {
@@ -317,6 +326,19 @@ header {
     border: none;
 
 
+}
+@media screen and (max-width: 950px) {
+    .segundo {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding:20px;
+        text-align: center;
+        font-size: larger;
+        
+    }.secundaria, .primaria ,.infantil , .bachiller , .guarderia{
+        border: none;
+    }
 }
 
 .tercero {
@@ -700,9 +722,3 @@ footer {
     color: #117fad;
 }
 
-@media screen and (max-width:600px) {
-    .contenedor .menuhamburguesa {
-        display: none;
-    }
-
-}
