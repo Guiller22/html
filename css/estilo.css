@@ -6,8 +6,7 @@
     margin-right: auto
 }
 
-header {
-    display: flex;
+#barraSuperior {
     background-color: #D91616;
     overflow: auto;
     color: white;
@@ -24,8 +23,24 @@ header {
 .menu .icon{
     display: none;
   }
-
-  
+.iconoOfrecimientos{
+    padding: 10px;
+}
+@media screen and (max-width: 950px) {
+    .direccion {
+        flex-direction: column !important;
+    }
+    .telefono{
+        flex-direction: column !important;
+    }
+    .correo{
+        flex-direction: column !important;
+    }
+    .redes{
+        margin-top: 15px !important;
+        display: block !important;
+    }
+}
 @media screen and (max-width: 950px) {
     .menu a:not(:first-child) {display: none;}
     .menu a.icon {
@@ -65,7 +80,7 @@ header {
         font-size: large!important;
     }
   @media screen and (max-width: 950px){
-      .primero{
+      .comunidad{
           flex-direction: column!important;
       }
     }
@@ -128,12 +143,10 @@ header {
 
 .fa {
     padding: 5px;
-  font-size: 15px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-
-  border-radius: 50%;
+    font-size: 15px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
 }
 
 .fa:hover {
@@ -169,8 +182,6 @@ header {
 .redes {
     display: inline-flex;
     margin-top: 5px;
-    padding-left: 50%;
-    position: relative;
     padding-bottom: 10px;
 }
 
@@ -208,7 +219,7 @@ header {
 
 }
 
-.primero {
+.comunidad {
     display: flex;
     flex-direction: row;
     margin: 10px;
@@ -246,10 +257,11 @@ header {
 
 
 
-.sexto {
+.información {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding-bottom: 40px;
+    width: 50%;
 }
 
 .titulo1 {
@@ -307,12 +319,12 @@ header {
     color: red;
 }
 
-.segundo {
+.etapas {
     display: flex;
     flex-direction: row;
 }
 
-.segundo .guarderia {
+.etapas .guarderia {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -323,7 +335,7 @@ header {
     width: 30%;
 }
 
-.segundo .primaria {
+.etapas .primaria {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -339,7 +351,7 @@ header {
     width: 30%;
 }
 
-.segundo .infantil {
+.etapas .infantil {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -361,7 +373,7 @@ header {
 
 }
 
-.segundo .secundaria {
+.etapas .secundaria {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -372,7 +384,7 @@ header {
     width: 30%;
 }
 
-.segundo .bachiller {
+.etapas .bachiller {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -381,6 +393,10 @@ header {
 
 .bachiller img {
     width: 30%;
+}
+
+.botonCursos{
+    padding-bottom: 5px;
 }
 
 .botonCursos button {
@@ -394,9 +410,10 @@ header {
     border: none;
 
 
+
 }
 @media screen and (max-width: 950px) {
-    .segundo {
+    .etapas {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -447,8 +464,6 @@ header {
     flex-direction: row;
     width: 65%;
 
-
-
 }
 
 
@@ -457,9 +472,6 @@ header {
     display: flex;
     flex-direction: row;
     width: 80%;
-
-
-
 }
 
 
@@ -467,13 +479,11 @@ header {
     background-color: rgb(153, 153, 153, 0.2);
 }
 
-.tienda p {
+.ofrecimientos{
     font-size: small;
+    padding: 5px;
 }
 
-.innovacion p {
-    font-size: small;
-}
 .madrugadores{
     background-color: rgb(153, 153, 153, 0.2);
 }
@@ -538,7 +548,8 @@ header {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        padding:20px;
+
+        
     }
 
     .col {
@@ -746,10 +757,7 @@ footer {
     float: left;
 }
 
-.etapas {
-    width: 25%;
-    float: left;
-}
+
 
 .servicios {
     float: right;

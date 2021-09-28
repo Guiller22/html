@@ -15,7 +15,7 @@
 
 <body>
 
-    <header>
+    <header id="barraSuperior">
         <div class="contenido">
             <div class=direccion>
                 <span class="material-icons">location_on</span>
@@ -59,17 +59,21 @@
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
         <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img1.jpg" alt="...">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img1.jpg"
+                    alt="...">
             </li>
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img2.jpg" alt="...">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img2.jpg"
+                    alt="...">
             </li>
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/white.jpg"
-                alt="..."></li>
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img3.jpg" alt="...">
-                </li>
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img4.jpg" alt="...">
+                    alt="..."></li>
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img3.jpg"
+                    alt="...">
             </li>
-            
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img4.jpg"
+                    alt="...">
+            </li>
+
         </ol>
 
 
@@ -116,7 +120,7 @@
 
     </div>
     <h1 class=titulo1>Una comunidad educativa</h1>
-    <div class=primero>
+    <div class=comunidad>
         <div class=imagen2>
             <img src=img/colegio.jpg>
         </div>
@@ -139,7 +143,7 @@
         </div>
     </div>
     <h1 class=titulo3>Etapas educativas</h1>
-    <div class=segundo>
+    <div class=etapas>
 
         <div class="guarderia">
             <div class="iconoGuarderia"><img src="img/guarderia.png">
@@ -202,43 +206,50 @@
         </div>
         <h1 class=titulo3>Qué te ofrecemos</h1>
         <div class="row">
-            <div class="col col-25">
-                <div class="tienda">
-                    <div class="iconoTienda"><img src="img/tienda.png">
-                    </div>
-                        <h1 class="tituloOfrece">Tienda online</h1>
+            <div class="col col-25 tienda">
 
-                    <p>Accede cómodamente desde tu casa a nuestra tienda online para conocer los materiales
-                        escolares que necesita tu hijo</p>
-                    <button>Saber mas</button>
+                <div class="iconoOfrecimientos">
+                    <img src="img/tienda.png">
                 </div>
-            </div>
-            <div class="col col-25">
-                <div class="innovacion">
-                    <div class="iconoInnovacion"><img src="img/bombilla.png">
-                    </div>
-                    <h1 class="tituloOfrece">Planes de innovacion</h1>
-                    <p>Permite una comunicación abierta entre profesores, alumnos y familiares que cohesiona la
-                        comunidad educativa y el aprendizaje innovador personalizado</p>
-                    <div class="botonCursos"><button>Saber mas</button></div>
+                <div class="tituloTienda">
+                    <h1 class="tituloOfrece">Tienda online</h1>
                 </div>
+
+                <p class="ofrecimientos">Accede cómodamente desde tu casa a nuestra tienda online para conocer los
+                    materiales
+                    escolares que necesita tu hijo</p>
+                <div class="botonCursos"><button>Saber mas</button></div>
+
             </div>
-            <div class="col col-25">
-                <div class="madrugadores">
-                    <div class="iconoMadrugadores"><img src="img/reloj.png">
-                    </div>
-                    <h1 class="tituloOfrece">Madrugadores y continuadores</h1>
-                    <p>Desde el Colegio ofrecemos de lunes a viernes , como apoyo a la familia y conciliación de la
-                        vida laboral</p>
-                    <div class="botonCursos"><button>Saber mas</button></div>
+            <div class="col col-25 innovacion">
+
+                <div class="iconoOfrecimientos"><img src="img/bombilla.png">
                 </div>
+                <h1 class="tituloOfrece">Planes de innovacion</h1>
+                <p class="ofrecimientos">Permite una comunicación abierta entre profesores, alumnos y familiares que
+                    cohesiona la
+                    comunidad educativa y el aprendizaje innovador personalizado</p>
+                <div class="botonCursos"><button>Saber mas</button></div>
+
             </div>
-            <div class="col col-25">
-                <div class="comedor">
-                    <div class="iconoComedor"><img src="img/plato.png">
+            <div class="col col-25 madrugadores">
+
+                <div class="iconoOfrecimientos"><img src="img/reloj.png">
+                </div>
+                <h1 class="tituloOfrece">Madrugadores y continuadores</h1>
+                <p class="ofrecimientos">Desde el Colegio ofrecemos de lunes a viernes , como apoyo a la familia y
+                    conciliación de la
+                    vida laboral</p>
+                <div class="botonCursos"><button>Saber mas</button></div>
+
+            </div>
+            <div class="col col-25 comedor">
+                <div class="">
+                    <div class="iconoOfrecimientos"><img src="img/plato.png">
                     </div>
                     <h1 class="tituloOfrece">Comedor escolar</h1>
-                    <p>El Colegio dispone de servicio de comedor y la empresa que atiende este servicio es ARAMARK.
+                    <p class="ofrecimientos">El Colegio dispone de servicio de comedor y la empresa que atiende este
+                        servicio es ARAMARK.
                         la Administración del Colegio es la vía de enlace</p>
                     <div class="botonCursos"><button>Saber mas</button></div>
                 </div>
@@ -246,119 +257,124 @@
         </div>
 
         <div class="row">
-            <div class="col col-25">
-                <div class="actividades">
-                    <div class="iconoActividades"><img src="img/futbol.png">
-                    </div>
-                    <h1 class="tituloOfrece">Actividades extraescolares</h1>
-                    <p>Ofertamos diversas actividades extraescolares tanto educativas como deportivas. Entre ellas
-                        ofrecemos un club deportivo y una escuela de idiomas</p>
-                    <div class="botonCursos"><button>Saber mas</button></div>
+            <div class="col col-25 actividades">
+
+                <div class="iconoOfrecimientos"><img src="img/futbol.png">
                 </div>
+                <h1 class="tituloOfrece">Actividades extraescolares</h1>
+                <p class="ofrecimientos">Ofertamos diversas actividades extraescolares tanto educativas como deportivas.
+                    Entre ellas
+                    ofrecemos un club deportivo y una escuela de idiomas</p>
+                <div class="botonCursos"><button>Saber mas</button></div>
+
             </div>
-            <div class="col col-25">
-                <div class="pastoral">
-                    <div class="iconoPastoral"><img src="img/cruz2.png">
-                    </div>
-                    <h1 class="tituloOfrece">Pastoral</h1>
-                    <p>Queremos viajar y caminar por la vida apuntándonos al amor , la generosidad , la libertad ,
-                        gratuidad y todo aquello que nos invita a vivir en las familias , parroquia , en el
-                        colegio... en la vida.</p>
-                    <div class="botonCursos"><button>Saber mas</button></div>
+            <div class="col col-25 pastoral">
+
+                <div class="iconoOfrecimientos"><img src="img/cruz2.png">
                 </div>
+                <h1 class="tituloOfrece">Pastoral</h1>
+                <p class="ofrecimientos">Queremos viajar y caminar por la vida apuntándonos al amor , la generosidad
+                    , la libertad ,
+                    gratuidad y todo aquello que nos invita a vivir en las familias , parroquia , en el
+                    colegio... en la vida.</p>
+                <div class="botonCursos"><button>Saber mas</button></div>
+
             </div>
-            <div class="col col-25">
-                <div class="bilinguismo">
-                    <div class="iconoBilinguismo"><img src="img/bilinguismo.png">
-                    </div>
-                    <h1 class="tituloOfrece">Bilingüismo</h1>
-                    <p>Ayuda a conocer varias culturas que auidará a su progreso como personas tolerantes y abiertas
-                        respecto al mundo que les rodea</p>
-                    <div class="botonCursos"><button>Saber mas</button></div>
+            <div class="col col-25 bilinguismo">
+
+                <div class="iconoOfrecimientos"><img src="img/bilinguismo.png">
                 </div>
+                <h1 class="tituloOfrece">Bilingüismo</h1>
+                <p class="ofrecimientos">Ayuda a conocer varias culturas que auidará a su progreso como personas
+                    tolerantes y abiertas
+                    respecto al mundo que les rodea</p>
+                <div class="botonCursos"><button>Saber mas</button></div>
+
             </div>
-            <div class="col col-25">
-                <div class="plataforma">
-                    <div class="iconoPlataforma"><img src="img/portatil.png">
-                    </div>
-                    <h1 class="tituloOfrece">Plataforma educativa</h1>
-                    <p>Permite una comunicación abierta entre profesores, alumnos y familiares que cohesiona la
-                        comunidad educativa y el aprendizaje innovador personalizado</p>
-                    <div class="botonCursos"><button>Saber mas</button></div>
+            <div class="col col-25 plataforma">
+
+                <div class="iconoOfrecimientos"><img src="img/portatil.png">
                 </div>
+                <h1 class="tituloOfrece">Plataforma educativa</h1>
+                <p class="ofrecimientos">Permite una comunicación abierta entre profesores, alumnos y familiares que
+                    cohesiona la
+                    comunidad educativa y el aprendizaje innovador personalizado</p>
+                <div class="botonCursos"><button>Saber mas</button></div>
+
             </div>
         </div>
     </div>
     </div>
     </div>
-    <div class=quinto>
+    <div class=galeria>
         <h1 class="titulo2">Actualidad<h1></h1>
+            <div class="contenedorImagen">
+
+                <div class="textoDebajo">
+                    <img src="img/imagen3.jpg" style="width:100%">
+                    <p>Admirable!</p>
+                </div>
+                <div class="textoDebajo">
+                    <img src="img/imagen4.jpg" style="width:100%">
+                    <p>Escuela de Idiomas - International House</p>
+                </div>
+
+                <div class="textoDebajo">
+                    <img src="img/imagen5.jpg" style="width:100%">
+
+                    <p>100% aprobados en la EBAU de junio</p>
+                </div>
+
+            </div>
+            <a class="ant">&#10094;</a>
+            <a class="sig">&#10095;</a>
     </div>
-    <div class="contenedorImagen">
-
-        <div class="textoDebajo">
-            <img src="img/imagen3.jpg" style="width:100%">
-            <p>Admirable!</p>
-        </div>
-        <div class="textoDebajo">
-            <img src="img/imagen4.jpg" style="width:100%">
-            <p>Escuela de Idiomas - International House</p>
-        </div>
-
-        <div class="textoDebajo">
-            <img src="img/imagen5.jpg" style="width:100%">
-
-            <p>100% aprobados en la EBAU de junio</p>
-        </div>
-
     </div>
-    <a class="ant">&#10094;</a>
-    <a class="sig">&#10095;</a>
     </div>
+
     <h1 class="titulo2">Solicita información</h1>
-    <div class="sexto">
-        <div class="contenedorAbajo">
-            <div class="contenido1">
-                <div class="informacion">
-                    <div class=direccion>
-                        <span class="material-icons colorM">location_on</span>
-                        <p>Calle Puente Colgante,75 47006, Valladolid</p>
-                    </div>
-                    <br>
-                    <div class=telefono>
-                        <span class="material-icons colorM">phone</span>
-                        <p>983 234 705</p>
-                    </div>
-                    <br>
-                    <div class=correo>
-                        <span class="material-icons colorM">email</span>
-                        <p>info@agustinava.net</p>
-                    </div>
-                    <div class=redes2>
-                        <a href="#" class="fa fa-facebook color"></a>
-                        <a href="#" class="fa fa-twitter color"></a>
-                        <a href="#" class="fa fa-youtube color"></a>
-                        <a href="#" class="fa fa-instagram color"></a>
-                        <a href="#" class="fa fa-telegram color"></a>
-                    </div>
+    <div class="información">
+        <div class="contenido1">
+            <div class="informacion">
+                <div class=direccion>
+                    <span class="material-icons colorM">location_on</span>
+                    <p>Calle Puente Colgante,75 47006, Valladolid</p>
                 </div>
-                <div class="mapa">
-                    <img src="img/mapa.jpg" style="width:100%">
+                <br>
+                <div class=telefono>
+                    <span class="material-icons colorM">phone</span>
+                    <p>983 234 705</p>
+                </div>
+                <br>
+                <div class=correo>
+                    <span class="material-icons colorM">email</span>
+                    <p>info@agustinava.net</p>
+                </div>
+                <div class=redes2>
+                    <a href="#" class="fa fa-facebook color"></a>
+                    <a href="#" class="fa fa-twitter color"></a>
+                    <a href="#" class="fa fa-youtube color"></a>
+                    <a href="#" class="fa fa-instagram color"></a>
+                    <a href="#" class="fa fa-telegram color"></a>
                 </div>
             </div>
-            <div class="formulario">
-                <form>
-                    <p>Nombre</p><br><input type="text" id="nombre"></input><br>
-                    <p>Correo eléctronico</p><br><input type="correo" id="correo" name="correo"><br>
-                    <p>Teléfono</p><br><input type="number" id="tlf" name="tlf">
-                    <br>
-                    <p>Consulta</p><textarea id="consulta" name="consulta"></textarea>
-                    <input type="checkbox" id="terminos" name="terminos">
-                    <p>Acepto los términos y condiciones</p>
-                    <br><input type="submit" value="ENVIAR">
-                </form>
+            <div class="mapa">
+                <img src="img/mapa.jpg" style="width:100%">
             </div>
         </div>
+        <div class="formulario">
+            <form>
+                <p>Nombre</p><br><input type="text" id="nombre"></input><br>
+                <p>Correo eléctronico</p><br><input type="correo" id="correo" name="correo"><br>
+                <p>Teléfono</p><br><input type="number" id="tlf" name="tlf">
+                <br>
+                <p>Consulta</p><textarea id="consulta" name="consulta"></textarea>
+                <input type="checkbox" id="terminos" name="terminos">
+                <p>Acepto los términos y condiciones</p>
+                <br><input type="submit" value="ENVIAR">
+            </form>
+        </div>
+
     </div>
     </main>
     <footer>
@@ -397,7 +413,7 @@
                 </div>
             </div>
 
-            <div class="etapas">
+            <div class="etapasFooter">
                 <h2>Etapas educativas</h2>
                 <p>Primer ciclo de educacion infantil (Guarderia - 1 a 2 años)</p>
                 <p>Segundo ciclo de educacion infantil (3 a 5 años)</p>
@@ -438,4 +454,5 @@
     </footer>
 
 </body>
+
 </html>
