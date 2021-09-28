@@ -14,14 +14,82 @@ header {
     font-family: sans-serif;
 
 }
+.texto {
+    padding-bottom: 50%;
+}
+.menu .icon{
+    display: none;
+  }
+.menu{
+    overflow: hidden;
+
+    width: 100%;
+  }
+  
+@media screen and (max-width: 950px) {
+    .menu a:not(:first-child) {display: none;}
+    .menu a.icon {
+      float: right;
+      display: block;
+    }
+    .p1,.p2{
+        position: relative !important;
+        left: 0 !important;
 
 
-.menu {
-    display: inline;
-    flex-grow: 7.5;
-    margin: 10px 10px 10px 10px;
+    }
+    .botonArriba{
+        margin-top: 10px;
+        position: relative !important;
+        left: 40% !important;
+    }
+  }
+  
+  @media screen and (max-width: 950px) {
+    .menu.responsive {position: relative;}
+    .menu.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .menu.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  @media screen and (max-width: 950px){
+      
+    .texto h1 {
+        bottom: 0px !important;
+        font-size: large!important;
+    }
+  @media screen and (max-width: 950px){
+      .primero{
+          flex-direction: column!important;
+      }
+    }
+}
+.carousel-indicators {
+    list-style: none;
 }
 
+.carousel-indicators li,
+.carousel-indicators li.active {
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    position: relative;
+    margin: 10px;
+}
+
+.carousel-indicators img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
 .menu a {
     text-decoration: none;
     color: gray;
@@ -44,15 +112,10 @@ header {
 
 .contenedor .nombre {
     padding: 20px;
-    flex-grow: 2.5;
+    padding-right: 40%;
 
 }
-@media screen and (max-width:600px) {
-    .contenedor .menuhamburguesa {
-        display: none;
-    }
 
-}
 
 
 .nombre img {
@@ -65,12 +128,13 @@ header {
 }
 
 .fa {
-    margin: 10px 2px;
-    width: 15px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    object-fit: contain;
+    padding: 5px;
+  font-size: 15px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+
+  border-radius: 50%;
 }
 
 .fa:hover {
@@ -104,29 +168,34 @@ header {
 }
 
 .redes {
-    padding-left: 40%;
+    display: inline-flex;
+    margin-top: 5px;
+    padding-left: 55%;
+    position: relative;
+    padding-bottom: 10px;
 }
-
 .imagencentral {
     display: inline-block;
     position: relative;
 }
 
-#myCarousel button {
+.botonArriba {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: absolute;
-    top: 270px;
+    top: 50%;
     left: 490px;
     background-color: #50C9FD;
     border-radius: 7px;
     color: white;
     text-transform: uppercase;
     padding: 0.5em 1.5em;
-
+    border: none;
 }
-
-#myCarousel .p1 {
-    top: 150px;
+::before{
+    color: red;
+}
+.p1 {
+    top: 35%;
     position: absolute;
     color: #3d51c7;
     font-size: 20px;
@@ -134,8 +203,8 @@ header {
     font-weight: bold;
 }
 
-#myCarousel .p2 {
-    top: 190px;
+.p2 {
+    top: 40%;
     position: absolute;
     color: #9e2828;
     font-size: 50px;
@@ -179,10 +248,7 @@ header {
     margin-top: 4px;
 }
 
-.redes {
-    display: inline-flex;
-    margin-top: 5px;
-}
+
 
 
 .sexto {
@@ -227,6 +293,12 @@ header {
 
 .texto h1 {
     color: #50C9FD;
+    position: relative;
+    bottom: 25px;
+    font-size: xxx-large;
+}
+.texto p{
+    padding-bottom: 10px;
 }
 
 .carousel-control {

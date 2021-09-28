@@ -5,14 +5,15 @@
 <head>
     <meta charset="utf-8" />
     <title>Web colegio</title>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+
+</head>
 
 <body>
 
@@ -39,60 +40,78 @@
     </header>
 
     <div class=contenedor>
-        <button class="menuhamburguesa" onclick="openNav()">
-            <span class="material-icons">menu</span>
-        </button>
         <div class=nombre>
             <img src="img/icono.png">
         </div>
-        <div class=menu>
+        <nav class="menu" id="menu">
             <a href="#">NOSOTROS</a>
             <a href="#">PROPONEMOS</a>
             <a href="#">OFRECEMOS</a>
             <a href="#">AL DÍA</a>
             <a href="#">CONTACTO</a>
             <a href="#" class=selected>ÁREA PRIVADA</a>
-        </div>
+            <a href="javascript:void(0);" class="icon">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
     </div>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-    <main>
-        <div id=myCarousel class="carousel slide" data-ride="carousel">
-            <ol class="indicadores">
-                <li data-target=#myCarousel data-slide-to="0"></li>
-                <li data-target=#myCarousel data-slide-to="1"></li>
-                <li data-target=#myCarousel data-slide-to="2" class="active"></li>
-                <li data-target=#myCarousel data-slide-to="3"></li>
-                <li data-target=#myCarousel data-slide-to="4"></li>
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/white.jpg"
+                        alt="..."></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"><img src="img/img3.jpg" alt="...">
+                </li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"><img src="img/img2.jpg" alt="...">
+                </li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"><img src="img/img4.jpg" alt="...">
+                </li>
             </ol>
 
-            <div class="carousel-inner">
+
+            <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="img/white.jpg">
+                    <img src="img/white.jpg" alt="...">
+                    <div class="carousel-caption">
+                        1
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/white.jpg" alt="...">
+                    <div class="carousel-caption">
+                        2
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/white.jpg" alt="...">
+                    <div class="carousel-caption">
+                        2
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/white.jpg" alt="...">
+                    <div class="carousel-caption">
+                        2
+                    </div>
                 </div>
 
-                <div class="item">
-                    <img src="img/white.jpg">
-                </div>
-
-                <div class="item">
-                    <img src="img/white.jpg">
-                </div>
-                <p class=p1>Curso 2021-2022</p>
-                <p class=p2>Libros de texto</p>
-                <button href=# alt="Consulta el listado">Consulta el listado</button>
             </div>
 
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
-
-
+        <p class=p1>Curso 2021-2022</p>
+        <p class=p2>Libros de texto</p>
+        <button class="botonArriba" href=# alt="Consulta el listado">Consulta el listado</button>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 
         </div>
         <h1 class=titulo1>Una comunidad educativa</h1>
@@ -103,9 +122,15 @@
             <div class="textoImagen">
                 <div class=texto>
                     <h1>Educar para el estudio , la reflexion y la interioridad</h1>
-                    <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem
-                        Ipsum
-                        ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
+                    <p>Nuestro objetivo es conseguir la formación integral de los alumnos mediante el desarrollo
+                        armónico de todas sus capacidades
+                        físicas, psicológicas , socioculturales y trascendentes.</p>
+                    <p>Fomentar en nuestros alumnos un espíritu crítico ante opciones totalizadores de la vida y crear
+                        hábitos de trabajo para poder afrontar nuevas situaciones.</p>
+
+                    <p>Favorecer la enseñanza personalizada y liberadora , para que nuestros alumnos sean ellos mismo
+                        artífices de su propia educación</p>
+                    </p>
                 </div>
                 <div class=imagen3>
                     <img src=img/conocee.jpg>
@@ -119,28 +144,32 @@
                 <div class="iconoGuarderia"><img src="img/guarderia.png">
                 </div>
                 <h1>Guarderia</h1>
-                <p>La Escuela Infantil - Chekechea /primer ciclo de Eduación Infantil) consta de 2 cursos en los que atendemos a niños y niñas de 1 y 2 años de edad</p>
+                <p>La Escuela Infantil - Chekechea /primer ciclo de Eduación Infantil) consta de 2 cursos en los que
+                    atendemos a niños y niñas de 1 y 2 años de edad</p>
                 <div class="botonCursos"><button>Saber mas</button></div>
             </div>
             <div class="infantil">
                 <div class="iconoGuarderia"><img src="img/infantil.png">
                 </div>
                 <h1>Infantil</h1>
-                <p>El segundo ciclo de Educación Infantil consta de 3 cursos en el que atendemos a niños y niñas desde los 3 a los 5 años de edad</p>
+                <p>El segundo ciclo de Educación Infantil consta de 3 cursos en el que atendemos a niños y niñas desde
+                    los 3 a los 5 años de edad</p>
                 <div class="botonCursos"><button>Saber mas</button></div>
             </div>
             <div class="primaria">
                 <div class="iconoGuarderia"><img src="img/primaria.png">
                 </div>
                 <h1>Primaria</h1>
-                <p>La etapa de Educación Primaria está compuesta por 6 cursos, divididos en dos interniveles en los que atendemos a niños y niñas a partir del curso en el que cumplen los 6 años.</p>
+                <p>La etapa de Educación Primaria está compuesta por 6 cursos, divididos en dos interniveles en los que
+                    atendemos a niños y niñas a partir del curso en el que cumplen los 6 años.</p>
                 <div class="botonCursos"><button>Saber mas</button></div>
             </div>
             <div class="secundaria">
                 <div class="iconoGuarderia"><img src="img/secundaria.png">
                 </div>
                 <h1>Secundaria</h1>
-                <p>La Educación Secundaria Obligatoria es una etapa educativa de 4 cursos , donde se complementan los conocimientos y se adquieren otras muchas destrezas.</p>
+                <p>La Educación Secundaria Obligatoria es una etapa educativa de 4 cursos , donde se complementan los
+                    conocimientos y se adquieren otras muchas destrezas.</p>
                 <div class="botonCursos"><button>Saber mas</button></div>
             </div>
 
@@ -149,7 +178,8 @@
                 </div>
                 <h1>Bachiller</h1>
 
-                <p>El Bachillerato comprende dos cursos académicos. Nuestro Colegio ofrece los estudios de Bachillerato las modalidades de : humanidades , ciencias sociales y ciencias.</p>
+                <p>El Bachillerato comprende dos cursos académicos. Nuestro Colegio ofrece los estudios de Bachillerato
+                    las modalidades de : humanidades , ciencias sociales y ciencias.</p>
                 <div class="botonCursos"><button>Saber mas</button></div>
             </div>
         </div>
@@ -179,7 +209,8 @@
                             <h1 class="tituloOfrece">Tienda online</h1>
                         </div>
 
-                        <p>Accede cómodamente desde tu casa a nuestra tienda online para conocer los materiales escolares que necesita tu hijo</p>
+                        <p>Accede cómodamente desde tu casa a nuestra tienda online para conocer los materiales
+                            escolares que necesita tu hijo</p>
                         <div class="botonCursos"><button>Saber mas</button></div>
                     </div>
                 </div>
@@ -188,7 +219,8 @@
                         <div class="iconoInnovacion"><img src="img/bombilla.png">
                         </div>
                         <h1 class="tituloOfrece">Planes de innovacion</h1>
-                        <p>Permite una comunicación abierta entre profesores, alumnos y familiares que cohesiona la comunidad educativa y el aprendizaje innovador personalizado</p>
+                        <p>Permite una comunicación abierta entre profesores, alumnos y familiares que cohesiona la
+                            comunidad educativa y el aprendizaje innovador personalizado</p>
                         <div class="botonCursos"><button>Saber mas</button></div>
                     </div>
                 </div>
@@ -197,7 +229,8 @@
                         <div class="iconoMadrugadores"><img src="img/reloj.png">
                         </div>
                         <h1 class="tituloOfrece">Madrugadores y continuadores</h1>
-                        <p>Desde el Colegio ofrecemos de lunes a viernes , como apoyo a la familia y conciliación de la vida laboral</p>
+                        <p>Desde el Colegio ofrecemos de lunes a viernes , como apoyo a la familia y conciliación de la
+                            vida laboral</p>
                         <div class="botonCursos"><button>Saber mas</button></div>
                     </div>
                 </div>
@@ -206,7 +239,8 @@
                         <div class="iconoComedor"><img src="img/plato.png">
                         </div>
                         <h1 class="tituloOfrece">Comedor escolar</h1>
-                        <p>El Colegio dispone de servicio de comedor y la empresa que atiende este servicio es ARAMARK. la Administración del Colegio es la vía de enlace</p>
+                        <p>El Colegio dispone de servicio de comedor y la empresa que atiende este servicio es ARAMARK.
+                            la Administración del Colegio es la vía de enlace</p>
                         <div class="botonCursos"><button>Saber mas</button></div>
                     </div>
                 </div>
@@ -218,7 +252,8 @@
                         <div class="iconoActividades"><img src="img/futbol.png">
                         </div>
                         <h1 class="tituloOfrece">Actividades extraescolares</h1>
-                        <p>Ofertamos diversas actividades extraescolares tanto educativas como deportivas. Entre ellas ofrecemos un club deportivo y una escuela de idiomas</p>
+                        <p>Ofertamos diversas actividades extraescolares tanto educativas como deportivas. Entre ellas
+                            ofrecemos un club deportivo y una escuela de idiomas</p>
                         <div class="botonCursos"><button>Saber mas</button></div>
                     </div>
                 </div>
@@ -227,7 +262,9 @@
                         <div class="iconoPastoral"><img src="img/cruz2.png">
                         </div>
                         <h1 class="tituloOfrece">Pastoral</h1>
-                        <p>Queremos viajar y caminar por la vida apuntándonos al amor , la generosidad , la libertad , gratuidad y todo aquello que nos invita a vivir en las familias , parroquia , en el colegio... en la vida.</p>
+                        <p>Queremos viajar y caminar por la vida apuntándonos al amor , la generosidad , la libertad ,
+                            gratuidad y todo aquello que nos invita a vivir en las familias , parroquia , en el
+                            colegio... en la vida.</p>
                         <div class="botonCursos"><button>Saber mas</button></div>
                     </div>
                 </div>
@@ -236,7 +273,8 @@
                         <div class="iconoBilinguismo"><img src="img/bilinguismo.png">
                         </div>
                         <h1 class="tituloOfrece">Bilingüismo</h1>
-                        <p>Ayuda a conocer varias culturas que auidará a su progreso como personas tolerantes y abiertas respecto al mundo que les rodea</p>
+                        <p>Ayuda a conocer varias culturas que auidará a su progreso como personas tolerantes y abiertas
+                            respecto al mundo que les rodea</p>
                         <div class="botonCursos"><button>Saber mas</button></div>
                     </div>
                 </div>
@@ -245,7 +283,8 @@
                         <div class="iconoPlataforma"><img src="img/portatil.png">
                         </div>
                         <h1 class="tituloOfrece">Plataforma educativa</h1>
-                        <p>Permite una comunicación abierta entre profesores, alumnos y familiares que cohesiona la comunidad educativa y el aprendizaje innovador personalizado</p>
+                        <p>Permite una comunicación abierta entre profesores, alumnos y familiares que cohesiona la
+                            comunidad educativa y el aprendizaje innovador personalizado</p>
                         <div class="botonCursos"><button>Saber mas</button></div>
                     </div>
                 </div>
@@ -323,82 +362,83 @@
                 </div>
             </div>
         </div>
-    </main>
-    <footer>
-        <div class="contenido">
-            <div class="redesFooter">
-                <h2>Contacta con nosotros</h2>
-                <div class=direccion>
-                    <span class="material-icons">location_on</span>
-                    <p>Calle Puente Colgante,75 47006, Valladolid</p>
+        </main>
+        <footer>
+            <div class="contenido">
+                <div class="redesFooter">
+                    <h2>Contacta con nosotros</h2>
+                    <div class=direccion>
+                        <span class="material-icons">location_on</span>
+                        <p>Calle Puente Colgante,75 47006, Valladolid</p>
+                    </div>
+
+                    <div class=telefono>
+                        <span class="material-icons">phone</span>
+                        <p>983 234 705</p>
+                    </div>
+                    <br>
+                    <div class=correo>
+                        <span class="material-icons">email</span>
+                        <p>info@agustinava.net</p>
+                    </div>
+                </div>
+                <div class="reconocimientos">
+
+                    <h2>Reconocimientos</h2>
+                    <div class="imagenes">
+                        <div class="f2">
+                            <div class="c1">
+                                <img src="img/colab1.jpg">
+                                <img src="img/colab2.jpg">
+                            </div>
+                            <div class="c3">
+                                <img src="img/colab3.jpg">
+                                <img src="img/colab4.jpg">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class=telefono>
-                    <span class="material-icons">phone</span>
-                    <p>983 234 705</p>
+                <div class="etapas">
+                    <h2>Etapas educativas</h2>
+                    <p>Primer ciclo de educacion infantil (Guarderia - 1 a 2 años)</p>
+                    <p>Segundo ciclo de educacion infantil (3 a 5 años)</p>
+                    <p>Primaria</p>
+                    <p>Secundaria</p>
                 </div>
-                <br>
-                <div class=correo>
-                    <span class="material-icons">email</span>
-                    <p>info@agustinava.net</p>
-                </div>
-            </div>
-            <div class="reconocimientos">
 
-                <h2>Reconocimientos</h2>
-                <div class="imagenes">
-                    <div class="f2">
+                <div class="servicios">
+                    <div class="f1">
                         <div class="c1">
-                            <img src="img/colab1.jpg">
-                            <img src="img/colab2.jpg">
+                            <h2>Servicios</h2>
+                            <p>Tienda online</p>
+                            <p>Planes de innovacion</p>
+                            <p>Madrugadores y continuadores </p>
+                            <p>Comedor escolar</p>
                         </div>
-                        <div class="c3">
-                            <img src="img/colab3.jpg">
-                            <img src="img/colab4.jpg">
+                        <div class="c2">
+                            <p>Actividades extraescolares</p>
+                            <p>Pastoral</p>
+                            <p>Biblioteca</p>
+                            <p>Plataforma educativa</p>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="etapas">
-                <h2>Etapas educativas</h2>
-                <p>Primer ciclo de educacion infantil (Guarderia - 1 a 2 años)</p>
-                <p>Segundo ciclo de educacion infantil (3 a 5 años)</p>
-                <p>Primaria</p>
-                <p>Secundaria</p>
-            </div>
-
-            <div class="servicios">
-                <div class="f1">
-                    <div class="c1">
-                        <h2>Servicios</h2>
-                        <p>Tienda online</p>
-                        <p>Planes de innovacion</p>
-                        <p>Madrugadores y continuadores </p>
-                        <p>Comedor escolar</p>
-                    </div>
-                    <div class="c2">
-                        <p>Actividades extraescolares</p>
-                        <p>Pastoral</p>
-                        <p>Biblioteca</p>
-                        <p>Plataforma educativa</p>
-                    </div>
+                <div class="copy">
+                    <p>2021 © Copyright - Colegio Agustinas Valladolid</p>
+                </div>
+                <div class=redes3>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-telegram"></a>
                 </div>
             </div>
-            <div class="copy">
-                <p>2021 © Copyright - Colegio Agustinas Valladolid</p>
-            </div>
-            <div class=redes3>
-                <a href="#" class="fa fa-facebook" ></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-youtube"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-telegram"></a>
-            </div>
-        </div>
 
 
-    </footer>
+        </footer>
 
-</body>
+    </body>
+
 </html>
