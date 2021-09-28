@@ -20,11 +20,7 @@ header {
 .menu .icon{
     display: none;
   }
-.menu{
-    overflow: hidden;
 
-    width: 100%;
-  }
   
 @media screen and (max-width: 950px) {
     .menu a:not(:first-child) {display: none;}
@@ -69,6 +65,7 @@ header {
           flex-direction: column!important;
       }
     }
+    
 }
 .carousel-indicators {
     list-style: none;
@@ -93,13 +90,14 @@ header {
 .menu a {
     text-decoration: none;
     color: gray;
-    padding: 2px;
+    padding: 15px;
 }
 
 .menu .selected {
     border-radius: 50px;
     background-color: #50C9FD;
     color: white;
+    padding: 8px;
 }
 
 .contenedor {
@@ -112,7 +110,7 @@ header {
 
 .contenedor .nombre {
     padding: 20px;
-    padding-right: 40%;
+
 
 }
 
@@ -122,10 +120,7 @@ header {
     width: 50%;
 }
 
-.contenedor .menuhamburguesa {
-    display: none;
 
-}
 
 .fa {
     padding: 5px;
@@ -174,10 +169,7 @@ header {
     position: relative;
     padding-bottom: 10px;
 }
-.imagencentral {
-    display: inline-block;
-    position: relative;
-}
+
 
 .botonArriba {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -191,7 +183,7 @@ header {
     padding: 0.5em 1.5em;
     border: none;
 }
-::before{
+#prueba{
     color: red;
 }
 .p1 {
