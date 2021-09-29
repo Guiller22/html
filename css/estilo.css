@@ -43,7 +43,9 @@
     }
 }
 @media screen and (max-width: 950px) {
-    .menu a:not(:first-child) {display: none;}
+    .menu a:not(:last-child) {
+        display: none;
+    }
     .menu a.icon {
 
       display: block;
