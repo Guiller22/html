@@ -16,6 +16,7 @@
 .contenido{
     display: flex;
     padding-left: 40px;
+    flex-direction: row;
 }
 .texto {
     padding-bottom: 50%;
@@ -44,19 +45,23 @@
 @media screen and (max-width: 950px) {
     .menu a:not(:first-child) {display: none;}
     .menu a.icon {
-      float: right;
+
       display: block;
     }
-    .p1,.p2{
+    .p2{
         position: relative !important;
-        left: 0 !important;
+        left: 25% !important;
 
 
+    }
+    .p1{
+        position: relative !important;
+        left: 40% !important;
     }
     .botonArriba{
         margin-top: 10px;
         position: relative !important;
-        left: 40% !important;
+        left: 33% !important;
     }
   }
   
@@ -64,7 +69,7 @@
     .menu.responsive {position: relative;}
     .menu.responsive .icon {
       position: absolute;
-      right: 0;
+      right: 100%;
       top: 0;
     }
     .menu.responsive a {
@@ -412,6 +417,12 @@
 
 
 }
+#imagen {
+    width: 100%;
+    height: 800px;
+    background-size: cover;
+
+}
 @media screen and (max-width: 950px) {
     .etapas {
         display: flex;
@@ -424,9 +435,13 @@
     }.secundaria, .primaria ,.infantil , .bachiller , .guarderia{
         border: none;
     }
+    .h1movil{
+    position: relative;
+    left: -20%;
+    }
 }
 
-.tercero {
+.galeriaImagenes {
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -435,7 +450,7 @@
 
 }
 
-.tercero img {
+.galeriaImagenes img {
     width: 20%;
 }
 
@@ -632,7 +647,27 @@
         flex: 9.5;
     }
 }
-
+@media screen and (max-width: 900px) {
+    .contenido{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        height: 1200px !important;
+    }
+    .imagenes img{
+        width: 100% !important;
+    }
+    .redes3{
+        position: relative !important;
+        right: 0 !important;
+    }
+    .copy{
+            position: relative !important;
+            right: 0 !important;
+        }
+    }
+    
 .ant,
 .sig {
     position: relative;

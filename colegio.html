@@ -12,6 +12,87 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
+<script>
+    window.onload = function () {
+        const IMAGENES = [
+            'img/img0.jpg',
+            'img/img1.jpg',
+            'img/img2.jpg',
+            'img/img3.jpg',
+            'img/img4.jpg',
+        ];
+        let posicionActual = 0;
+        let $botonRetroceder = document.querySelector('#anterior');
+        let $botonAvanzar = document.querySelector('#siguiente');
+        let $imagen = document.querySelector('#imagen');
+        let intervalo;
+
+        function pasarFoto() {
+            if (posicionActual >= IMAGENES.length - 1) {
+                posicionActual = 0;
+            } else {
+                posicionActual++;
+            }
+            renderizarImagen();
+        }
+        function retrocederFoto() {
+            if (posicionActual <= 0) {
+                posicionActual = IMAGENES.length - 1;
+            } else {
+                posicionActual--;
+            }
+            renderizarImagen();
+        }
+        function renderizarImagen() {
+            $imagen.src = `${IMAGENES[posicionActual]}`;
+        }
+
+
+
+        function playIntervalo() {
+            intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
+            $botonAvanzar.setAttribute('disabled', true);
+            $botonRetroceder.setAttribute('disabled', true);
+            $botonPlay.setAttribute('disabled', true);
+            $botonStop.removeAttribute('disabled');
+
+        }
+
+
+        $botonAvanzar.addEventListener('click', pasarFoto);
+        $botonRetroceder.addEventListener('click', retrocederFoto);
+
+
+
+        var elements = document.getElementsByClassName('imagenesc');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener("click", function () {
+                document.getElementById("imagen").src = elements[this.id].src;
+                if (this.id == img0) {
+                    posicionActual = 0
+                } else if (this.id == img1) {
+                    posicionActual = 1
+                } else if (this.id == img2) {
+                    posicionActual = 2
+                } else if (this.id == img3) {
+                    posicionActual = 3
+                } else if (this.id == img4) {
+                    posicionActual = 4
+                }
+            }
+            )
+        }
+    }
+
+    function myFunction() {
+        var x = document.getElementById("menu");
+        if (x.className === "menu") {
+            x.className += " responsive";
+        } else {
+            x.className = "menu";
+        }
+    }
+</script>
 
 <body>
 
@@ -51,7 +132,7 @@
             <a href="#">AL DÍA</a>
             <a href="#">CONTACTO</a>
             <a href="#" class=selected>ÁREA PRIVADA</a>
-            <a href="javascript:void(0);" class="icon">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
         </nav>
@@ -60,59 +141,36 @@
 
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img1.jpg"
-                    alt="...">
+                    alt="..." class="imagenesc" id="img1">
             </li>
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img2.jpg"
-                    alt="...">
+                    alt="..." class="imagenesc" id="img2">
             </li>
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/white.jpg"
-                    alt="..."></li>
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img0.jpg"
+                    alt="..." class="imagenesc" id="img3"></li>
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img3.jpg"
-                    alt="...">
+                    alt="..." class="imagenesc" id="img4">
             </li>
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img4.jpg"
-                    alt="...">
+                    alt="..." class="imagenesc" id="img5">
             </li>
 
         </ol>
 
 
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="img/white.jpg" alt="...">
-                <div class="carousel-caption">
-                    1
-                </div>
-            </div>
-            <div class="item">
-                <img src="img/white.jpg" alt="...">
-                <div class="carousel-caption">
-                    2
-                </div>
-            </div>
-            <div class="item">
-                <img src="img/white.jpg" alt="...">
-                <div class="carousel-caption">
-                    2
-                </div>
-            </div>
-            <div class="item">
-                <img src="img/white.jpg" alt="...">
-                <div class="carousel-caption">
-                    2
-                </div>
-            </div>
 
-        </div>
+        <img alt="..." id="imagen" src="img/img0.jpg">
 
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" id="prueba"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" id="prueba"></span>
-            <span class="sr-only">Next</span>
-        </a>
+    </div>
+
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" id="anterior">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" id="prueba"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" id="siguiente">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" id="prueba"></span>
+        <span class="sr-only">Next</span>
+    </a>
     </div>
     <p class=p1>Curso 2021-2022</p>
     <p class=p2>Libros de texto</p>
@@ -148,7 +206,7 @@
         <div class="guarderia">
             <div class="iconoGuarderia"><img src="img/guarderia.png">
             </div>
-            <h1>Guarderia</h1>
+            <h1 class="h1movil">Guarderia</h1>
             <p>La Escuela Infantil - Chekechea /primer ciclo de Eduación Infantil) consta de 2 cursos en los que
                 atendemos a niños y niñas de 1 y 2 años de edad</p>
             <div class="botonCursos"><button>Saber mas</button></div>
@@ -164,7 +222,7 @@
         <div class="primaria">
             <div class="iconoGuarderia"><img src="img/primaria.png">
             </div>
-            <h1>Primaria</h1>
+            <h1 class="h1movil">Primaria</h1>
             <p>La etapa de Educación Primaria está compuesta por 6 cursos, divididos en dos interniveles en los que
                 atendemos a niños y niñas a partir del curso en el que cumplen los 6 años.</p>
             <div class="botonCursos"><button>Saber mas</button></div>
@@ -172,7 +230,7 @@
         <div class="secundaria">
             <div class="iconoGuarderia"><img src="img/secundaria.png">
             </div>
-            <h1>Secundaria</h1>
+            <h1 class="h1movil">Secundaria</h1>
             <p>La Educación Secundaria Obligatoria es una etapa educativa de 4 cursos , donde se complementan los
                 conocimientos y se adquieren otras muchas destrezas.</p>
             <div class="botonCursos"><button>Saber mas</button></div>
@@ -181,128 +239,128 @@
         <div class="bachiller">
             <div class="iconoGuarderia"><img src="img/bachiller.png">
             </div>
-            <h1>Bachiller</h1>
+            <h1 class="h1movil">Bachiller</h1>
 
             <p>El Bachillerato comprende dos cursos académicos. Nuestro Colegio ofrece los estudios de Bachillerato
                 las modalidades de : humanidades , ciencias sociales y ciencias.</p>
             <div class="botonCursos"><button>Saber mas</button></div>
         </div>
     </div>
-    <div>
-        <div class=tercero>
-            <div class="primeraFila">
-                <img src="img/niños1.jpg">
-                <img src="img/niños2.jpg">
-                <img src="img/niños3.jpg">
-                <img src="img/niños4.jpg">
-            </div>
-            <div class="segundaFila">
-                <img src="img/niños5.jpg">
-                <img src="img/niños6.jpg">
-                <img src="img/niños7.jpg">
-                <img src="img/niños8.jpg">
-            </div>
+    <div class=galeriaImagenes>
 
+        <div class="primeraFila">
+            <img src="img/niños1.jpg">
+            <img src="img/niños2.jpg">
+            <img src="img/niños3.jpg">
+            <img src="img/niños4.jpg">
         </div>
-        <h1 class=titulo3>Qué te ofrecemos</h1>
-        <div class="row">
-            <div class="col col-25 tienda">
-
-                <div class="iconoOfrecimientos">
-                    <img src="img/tienda.png">
-                </div>
-                <div class="tituloTienda">
-                    <h1 class="tituloOfrece">Tienda online</h1>
-                </div>
-
-                <p class="ofrecimientos">Accede cómodamente desde tu casa a nuestra tienda online para conocer los
-                    materiales
-                    escolares que necesita tu hijo</p>
-                <div class="botonCursos"><button>Saber mas</button></div>
-
-            </div>
-            <div class="col col-25 innovacion">
-
-                <div class="iconoOfrecimientos"><img src="img/bombilla.png">
-                </div>
-                <h1 class="tituloOfrece">Planes de innovacion</h1>
-                <p class="ofrecimientos">Permite una comunicación abierta entre profesores, alumnos y familiares que
-                    cohesiona la
-                    comunidad educativa y el aprendizaje innovador personalizado</p>
-                <div class="botonCursos"><button>Saber mas</button></div>
-
-            </div>
-            <div class="col col-25 madrugadores">
-
-                <div class="iconoOfrecimientos"><img src="img/reloj.png">
-                </div>
-                <h1 class="tituloOfrece">Madrugadores y continuadores</h1>
-                <p class="ofrecimientos">Desde el Colegio ofrecemos de lunes a viernes , como apoyo a la familia y
-                    conciliación de la
-                    vida laboral</p>
-                <div class="botonCursos"><button>Saber mas</button></div>
-
-            </div>
-            <div class="col col-25 comedor">
-                <div class="">
-                    <div class="iconoOfrecimientos"><img src="img/plato.png">
-                    </div>
-                    <h1 class="tituloOfrece">Comedor escolar</h1>
-                    <p class="ofrecimientos">El Colegio dispone de servicio de comedor y la empresa que atiende este
-                        servicio es ARAMARK.
-                        la Administración del Colegio es la vía de enlace</p>
-                    <div class="botonCursos"><button>Saber mas</button></div>
-                </div>
-            </div>
+        <div class="segundaFila">
+            <img src="img/niños5.jpg">
+            <img src="img/niños6.jpg">
+            <img src="img/niños7.jpg">
+            <img src="img/niños8.jpg">
         </div>
 
-        <div class="row">
-            <div class="col col-25 actividades">
+    </div>
+    <h1 class=titulo3>Qué te ofrecemos</h1>
+    <div class="row">
+        <div class="col col-25 tienda">
 
-                <div class="iconoOfrecimientos"><img src="img/futbol.png">
-                </div>
-                <h1 class="tituloOfrece">Actividades extraescolares</h1>
-                <p class="ofrecimientos">Ofertamos diversas actividades extraescolares tanto educativas como deportivas.
-                    Entre ellas
-                    ofrecemos un club deportivo y una escuela de idiomas</p>
-                <div class="botonCursos"><button>Saber mas</button></div>
-
+            <div class="iconoOfrecimientos">
+                <img src="img/tienda.png">
             </div>
-            <div class="col col-25 pastoral">
-
-                <div class="iconoOfrecimientos"><img src="img/cruz2.png">
-                </div>
-                <h1 class="tituloOfrece">Pastoral</h1>
-                <p class="ofrecimientos">Queremos viajar y caminar por la vida apuntándonos al amor , la generosidad
-                    , la libertad ,
-                    gratuidad y todo aquello que nos invita a vivir en las familias , parroquia , en el
-                    colegio... en la vida.</p>
-                <div class="botonCursos"><button>Saber mas</button></div>
-
+            <div class="tituloTienda">
+                <h1 class="tituloOfrece">Tienda online</h1>
             </div>
-            <div class="col col-25 bilinguismo">
 
-                <div class="iconoOfrecimientos"><img src="img/bilinguismo.png">
-                </div>
-                <h1 class="tituloOfrece">Bilingüismo</h1>
-                <p class="ofrecimientos">Ayuda a conocer varias culturas que auidará a su progreso como personas
-                    tolerantes y abiertas
-                    respecto al mundo que les rodea</p>
-                <div class="botonCursos"><button>Saber mas</button></div>
+            <p class="ofrecimientos">Accede cómodamente desde tu casa a nuestra tienda online para conocer los
+                materiales
+                escolares que necesita tu hijo</p>
+            <div class="botonCursos"><button>Saber mas</button></div>
 
+        </div>
+        <div class="col col-25 innovacion">
+
+            <div class="iconoOfrecimientos"><img src="img/bombilla.png">
             </div>
-            <div class="col col-25 plataforma">
+            <h1 class="tituloOfrece">Planes de innovacion</h1>
+            <p class="ofrecimientos">Permite una comunicación abierta entre profesores, alumnos y familiares que
+                cohesiona la
+                comunidad educativa y el aprendizaje innovador personalizado</p>
+            <div class="botonCursos"><button>Saber mas</button></div>
 
-                <div class="iconoOfrecimientos"><img src="img/portatil.png">
+        </div>
+        <div class="col col-25 madrugadores">
+
+            <div class="iconoOfrecimientos"><img src="img/reloj.png">
+            </div>
+            <h1 class="tituloOfrece">Madrugadores y continuadores</h1>
+            <p class="ofrecimientos">Desde el Colegio ofrecemos de lunes a viernes , como apoyo a la familia y
+                conciliación de la
+                vida laboral</p>
+            <div class="botonCursos"><button>Saber mas</button></div>
+
+        </div>
+        <div class="col col-25 comedor">
+            <div class="">
+                <div class="iconoOfrecimientos"><img src="img/plato.png">
                 </div>
-                <h1 class="tituloOfrece">Plataforma educativa</h1>
-                <p class="ofrecimientos">Permite una comunicación abierta entre profesores, alumnos y familiares que
-                    cohesiona la
-                    comunidad educativa y el aprendizaje innovador personalizado</p>
+                <h1 class="tituloOfrece">Comedor escolar</h1>
+                <p class="ofrecimientos">El Colegio dispone de servicio de comedor y la empresa que atiende este
+                    servicio es ARAMARK.
+                    la Administración del Colegio es la vía de enlace</p>
                 <div class="botonCursos"><button>Saber mas</button></div>
-
             </div>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-25 actividades">
+
+            <div class="iconoOfrecimientos"><img src="img/futbol.png">
+            </div>
+            <h1 class="tituloOfrece">Actividades extraescolares</h1>
+            <p class="ofrecimientos">Ofertamos diversas actividades extraescolares tanto educativas como deportivas.
+                Entre ellas
+                ofrecemos un club deportivo y una escuela de idiomas</p>
+            <div class="botonCursos"><button>Saber mas</button></div>
+
+        </div>
+        <div class="col col-25 pastoral">
+
+            <div class="iconoOfrecimientos"><img src="img/cruz2.png">
+            </div>
+            <h1 class="tituloOfrece">Pastoral</h1>
+            <p class="ofrecimientos">Queremos viajar y caminar por la vida apuntándonos al amor , la generosidad
+                , la libertad ,
+                gratuidad y todo aquello que nos invita a vivir en las familias , parroquia , en el
+                colegio... en la vida.</p>
+            <div class="botonCursos"><button>Saber mas</button></div>
+
+        </div>
+        <div class="col col-25 bilinguismo">
+
+            <div class="iconoOfrecimientos"><img src="img/bilinguismo.png">
+            </div>
+            <h1 class="tituloOfrece">Bilingüismo</h1>
+            <p class="ofrecimientos">Ayuda a conocer varias culturas que auidará a su progreso como personas
+                tolerantes y abiertas
+                respecto al mundo que les rodea</p>
+            <div class="botonCursos"><button>Saber mas</button></div>
+
+        </div>
+        <div class="col col-25 plataforma">
+
+            <div class="iconoOfrecimientos"><img src="img/portatil.png">
+            </div>
+            <h1 class="tituloOfrece">Plataforma educativa</h1>
+            <p class="ofrecimientos">Permite una comunicación abierta entre profesores, alumnos y familiares que
+                cohesiona la
+                comunidad educativa y el aprendizaje innovador personalizado</p>
+            <div class="botonCursos"><button>Saber mas</button></div>
+
+        </div>
+    </div>
     </div>
     </div>
     </div>
