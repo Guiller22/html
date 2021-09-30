@@ -25,6 +25,9 @@
     width: 100% !important; }
     .textoImagen .imagen3 {
       position: relative !important; } }
+.imagen3 img {
+  width: 100%; }
+
 #barraSuperior {
   background-color: #d91616;
   color: white;

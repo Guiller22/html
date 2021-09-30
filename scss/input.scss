@@ -32,6 +32,9 @@ $letraSerif: sans-serif;
         }
     }
 }
+.imagen3 img {
+    width: 100%;
+}
 #barraSuperior {
     background-color: $rojo;
     color: white;
@@ -220,6 +223,7 @@ $letraSerif: sans-serif;
             .imagen3 {
                 position: absolute;
                 bottom: 0;
+                
             }
         }
     }
