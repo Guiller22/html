@@ -46,7 +46,7 @@
     .menu a:not(:last-child) {
         display: none;
     }
-    .menu a.icon {
+    .menu .icon {
 
       display: block;
     }
@@ -435,10 +435,6 @@
         
     }.secundaria, .primaria ,.infantil , .bachiller , .guarderia{
         border: none;
-    }
-    .h1movil{
-    position: relative;
-    left: -20%;
     }
 }
 

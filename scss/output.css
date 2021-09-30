@@ -1,0 +1,475 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto; }
+
+.contenido {
+  display: flex;
+  padding-left: 40px;
+  flex-direction: row; }
+
+@media screen and (max-width: 900px) {
+  .contenido {
+    display: flex;
+    flex-direction: column; } }
+#imagen {
+  width: 100%; }
+
+@media screen and (max-width: 900px) {
+  .imagen2 {
+    width: 100% !important; }
+
+  .textoImagen {
+    width: 100% !important; }
+    .textoImagen .imagen3 {
+      position: relative !important; } }
+#barraSuperior {
+  background-color: #d91616;
+  color: white;
+  font-family: sans-serif; }
+  #barraSuperior .contenido {
+    display: flex;
+    padding-left: 40px;
+    flex-direction: row; }
+    #barraSuperior .contenido .direccion {
+      margin-top: 5px;
+      display: inline-flex; }
+      #barraSuperior .contenido .direccion p {
+        margin-top: 4px; }
+    #barraSuperior .contenido .correo {
+      margin-top: 5px;
+      display: inline-flex; }
+      #barraSuperior .contenido .correo p {
+        margin-top: 4px; }
+    #barraSuperior .contenido .telefono {
+      display: inline-flex;
+      margin-top: 5px; }
+      #barraSuperior .contenido .telefono p {
+        margin-top: 4px; }
+    #barraSuperior .contenido .redes {
+      display: inline-flex;
+      margin-top: 5px;
+      padding-bottom: 10px; }
+
+.fa {
+  padding: 5px;
+  font-size: 15px;
+  width: 30px;
+  text-align: center;
+  border-radius: 50%; }
+
+.fa:hover {
+  opacity: 0.7; }
+
+.fa-facebook {
+  color: #d91616;
+  background-color: white; }
+
+.fa-twitter {
+  color: #d91616;
+  background-color: white; }
+
+.fa-instagram {
+  color: #d91616;
+  background-color: white; }
+
+.fa-youtube {
+  color: #d91616;
+  background-color: white; }
+
+.fa-telegram {
+  color: #d91616;
+  background-color: white; }
+
+.contenedor {
+  display: flex;
+  font-weight: bold;
+  align-items: center; }
+  .contenedor .contenedor .nombre {
+    padding: 20px; }
+    .contenedor .contenedor .nombre img {
+      width: 50%; }
+  .contenedor .menu a {
+    text-decoration: none;
+    color: gray;
+    padding: 15px; }
+  .contenedor .menu .selected {
+    border-radius: 50px;
+    background-color: #50c9fd;
+    color: white;
+    padding: 8px; }
+  .contenedor .menu .icon {
+    display: none; }
+
+.p1 {
+  top: 35%;
+  position: absolute;
+  color: #3d51c7;
+  font-size: 20px;
+  left: 500px;
+  font-weight: bold; }
+
+.p2 {
+  top: 40%;
+  position: absolute;
+  color: #d91616;
+  font-size: 50px;
+  left: 420px; }
+
+.botonArriba {
+  font-family: sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 490px;
+  background-color: #50c9fd;
+  border-radius: 7px;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.5em 1.5em;
+  border: none; }
+
+.carousel .carousel-indicators {
+  list-style: none; }
+  .carousel .carousel-indicators li.active,
+  .carousel .carousel-indicators li {
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    position: relative;
+    margin: 10px; }
+  .carousel .carousel-indicators img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+
+.titulo1 {
+  color: #d91616;
+  text-align: center;
+  padding: 15px;
+  padding-top: 40px; }
+
+@media screen and (max-width: 950px) {
+  .comunidad {
+    flex-direction: column !important; } }
+.comunidad {
+  display: flex;
+  flex-direction: row;
+  margin: 10px; }
+  .comunidad .imagen2 {
+    width: 50%; }
+    .comunidad .imagen2 img {
+      object-fit: contain;
+      width: 100%;
+      padding-right: 25px; }
+  .comunidad .textoImagen {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: justify;
+    position: relative; }
+    .comunidad .textoImagen .texto h1 {
+      color: #50c9fd;
+      position: relative;
+      bottom: 25px;
+      font-size: xxx-large; }
+    .comunidad .textoImagen .texto .imagen3 {
+      position: absolute;
+      bottom: 0; }
+
+.etapas {
+  display: flex;
+  flex-direction: row; }
+  .etapas .guarderia {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20%; }
+    .etapas .guarderia img {
+      width: 30%; }
+  .etapas .primaria {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20%;
+    border-right: 2px rgba(121, 121, 121, 0.5) dashed; }
+    .etapas .primaria img {
+      width: 30%; }
+  .etapas .infantil {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20%;
+    border-left: 2px rgba(121, 121, 121, 0.5) dashed;
+    border-right: 2px rgba(121, 121, 121, 0.5) dashed; }
+    .etapas .infantil img {
+      width: 30%; }
+  .etapas .secundaria {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20%;
+    border-right: 2px rgba(121, 121, 121, 0.5) dashed; }
+    .etapas .secundaria img {
+      width: 30%; }
+  .etapas .bachiller {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20%; }
+    .etapas .bachiller img {
+      width: 30%; }
+
+.botonCursos {
+  padding-bottom: 5px; }
+  .botonCursos button {
+    background-color: #117fad !important;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 6px 18px;
+    text-decoration: none;
+    border: none; }
+
+@media screen and (max-width: 950px) {
+  .etapas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 20px;
+    text-align: center;
+    font-size: larger; }
+    .etapas .secundaria,
+    .etapas .primaria,
+    .etapas .infantil,
+    .etapas .bachiller,
+    .etapas .guarderia {
+      border: none;
+      width: 100% !important;
+      text-align: center; } }
+.galeriaImagenes {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 10%; }
+  .galeriaImagenes img {
+    width: 20%; }
+  .galeriaImagenes .primeraFila {
+    flex-direction: row;
+    flex: 1; }
+  .galeriaImagenes .segundaFila {
+    flex-direction: row;
+    flex: 2; }
+
+.col {
+  flex-basis: 100%;
+  text-align: center; }
+
+.col2 {
+  flex-basis: 100%;
+  text-align: justify;
+  padding-left: 30px;
+  align-items: center;
+  top: 50px;
+  position: relative; }
+
+.ofrecimientos {
+  font-size: small;
+  padding: 5px;
+  margin: 10px; }
+
+@media screen and (min-width: 980px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; }
+
+  .col-25 {
+    flex: 2.5; } }
+.madrugadores {
+  background-color: rgba(153, 153, 153, 0.2); }
+
+.pastoral {
+  background-color: rgba(153, 153, 153, 0.2); }
+
+.plataforma {
+  background-color: rgba(153, 153, 153, 0.2); }
+
+.tienda {
+  background-color: rgba(153, 153, 153, 0.2); }
+
+.contenedorImagen {
+  width: 90%;
+  display: flex;
+  flex-direction: row; }
+  .contenedorImagen .textoDebajo {
+    display: flex;
+    flex-direction: column; }
+    .contenedorImagen .textoDebajo p {
+      color: #3aa8b5;
+      font-weight: bold;
+      padding: 10px;
+      font-size: large; }
+
+.ant,
+.sig {
+  position: relative;
+  width: auto;
+  padding: 10px;
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  bottom: 160px;
+  right: -105px; }
+
+.sig {
+  left: 90%;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center; }
+
+.informacion1 {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+  width: 50%; }
+  .informacion1 .contenido1 {
+    width: 50%; }
+    .informacion1 .contenido1 .colorM {
+      color: #117fad; }
+  .informacion1 .redes2 {
+    margin-top: 5px; }
+
+.formulario {
+  width: 50%;
+  padding-left: 10px; }
+  .formulario p {
+    color: gray;
+    display: inline-flex;
+    padding-left: 5px; }
+  .formulario form input[type="submit"] {
+    background-color: #117fad !important;
+    border-radius: 50px;
+    color: white;
+    font-size: 17px;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 6px 18px;
+    text-decoration: none;
+    border: none; }
+  .formulario textarea {
+    width: 100%;
+    height: 100px;
+    margin: 8px 0;
+    resize: none;
+    display: block;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: rgba(153, 153, 153, 0.5); }
+  .formulario form input[type="text"],
+  .formulario form input[type="correo"],
+  .formulario form input[type="number"] {
+    width: 100%;
+    outline: 2;
+    border-width: 0 0 2px;
+    border-color: rgba(153, 153, 153, 0.5); }
+
+footer {
+  background-color: #c71414;
+  color: white;
+  height: 400px;
+  position: relative; }
+  footer .redesFooter {
+    width: 25%;
+    float: left;
+    padding-left: 15px; }
+  footer .reconocimientos {
+    width: 25%;
+    float: left; }
+    footer .reconocimientos .imagenes img {
+      width: 45%; }
+  footer .servicios {
+    float: right;
+    width: 25%; }
+  footer .copy {
+    position: absolute;
+    bottom: 0px;
+    padding-left: 15px;
+    padding-bottom: 20px; }
+  footer .redes3 {
+    position: absolute;
+    bottom: 0;
+    display: inline-flex;
+    padding-bottom: 20px;
+    right: 40px; }
+
+@media screen and (max-width: 900px) {
+  .contenido {
+    display: flex;
+    flex-direction: column !important;
+    text-align: center; } }
+@media screen and (max-width: 900px) {
+  footer {
+    height: 1200px !important; } }
+@media screen and (max-width: 950px) {
+  .menu a:not(:last-child) {
+    display: none; }
+
+  .menu .icon {
+    display: block !important; }
+
+  .botonArriba {
+    margin-top: 10px;
+    position: relative !important;
+    left: 0%; } }
+@media screen and (max-width: 950px) {
+  .menu.responsive {
+    position: relative; }
+
+  .menu.responsive .icon {
+    position: absolute;
+    right: 100%;
+    top: 0; }
+
+  .menu.responsive a {
+    float: none;
+    display: block;
+    text-align: left; } }
+@media screen and (max-width: 980px) {
+  .col.col-25.actividades {
+    background-color: rgba(153, 153, 153, 0.2); }
+
+  .col.col-25.pastoral {
+    background-color: white; }
+
+  .col.col-25.bilinguismo {
+    background-color: rgba(153, 153, 153, 0.2); }
+
+  .col.col-25.plataforma {
+    background-color: white; } }
+@media screen and (max-width: 950px) {
+  .libros {
+    background: rgba(153, 153, 153, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    padding: 20px; }
+    .libros .p1 {
+      left: 0;
+      right: 0;
+      position: relative !important; }
+    .libros .p2 {
+      left: 0;
+      right: 0;
+      position: relative !important; } }
+
+/*# sourceMappingURL=output.css.map */
