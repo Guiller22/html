@@ -160,7 +160,8 @@
   flex-direction: row;
   margin: 10px; }
   .comunidad .imagen2 {
-    width: 50%; }
+    width: 50%;
+    margin-bottom: 10px; }
     .comunidad .imagen2 img {
       object-fit: contain;
       width: 100%;
@@ -174,7 +175,6 @@
     .comunidad .textoImagen .texto h1 {
       color: #50c9fd;
       position: relative;
-      bottom: 25px;
       font-size: xxx-large; }
     .comunidad .textoImagen .texto .imagen3 {
       position: absolute;

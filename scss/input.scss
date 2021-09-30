@@ -197,6 +197,7 @@ $letraSerif: sans-serif;
 
     .imagen2 {
         width: 50%;
+        margin-bottom: 10px;
         img {
             object-fit: contain;
             width: 100%;
@@ -214,7 +215,6 @@ $letraSerif: sans-serif;
             h1 {
                 color: #50c9fd;
                 position: relative;
-                bottom: 25px;
                 font-size: xxx-large;
             }
             .imagen3 {
