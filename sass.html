@@ -17,7 +17,7 @@
 <body>
 
     <header id="barraSuperior">
-        <div class="contenido">
+        <div class="parteIzquierda">
             <div class=direccion>
                 <span class="material-icons">location_on</span>
                 <p>Calle Puente Colgante,75 47006, Valladolid</p>
@@ -30,21 +30,19 @@
                 <span class="material-icons">email</span>
                 <p>info@agustinava.net</p>
             </div>
-
-            <div class=redes>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-youtube"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-telegram"></a>
-            </div>
         </div>
+        <div class=redes>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-telegram"></a>
+        </div>
+
     </header>
 
     <nav class=contenedor>
-        <div class=nombre>
-            <img src="img/icono.png">
-        </div>
+        <img class=nombre src="img/icono.png">
         <div class="menu" id="menu">
             <a href="#">NOSOTROS</a>
             <a href="#">PROPONEMOS</a>
@@ -52,7 +50,7 @@
             <a href="#">AL DÍA</a>
             <a href="#">CONTACTO</a>
             <a href="#" class=selected>ÁREA PRIVADA</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <a href="javascript:void(0);" class="icon" onclick="menuDesplegable()">
                 <i class="fa fa-bars"></i>
             </a>
     </nav>
@@ -60,19 +58,19 @@
 
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img0.jpg"
-                    alt="..." class="imagenesc" id="img0"></li>
+                    alt="..." class="imagenesc" id="0"></li>
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img1.jpg"
-                    alt="..." class="imagenesc" id="img1">
+                    alt="..." class="imagenesc" id="1">
             </li>
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img2.jpg"
-                    alt="..." class="imagenesc" id="img2">
+                    alt="..." class="imagenesc" id="2">
             </li>
 
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img3.jpg"
-                    alt="..." class="imagenesc" id="img3">
+                    alt="..." class="imagenesc" id="3">
             </li>
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="img/img4.jpg"
-                    alt="..." class="imagenesc" id="img4">
+                    alt="..." class="imagenesc" id="4">
             </li>
 
         </ol>
@@ -91,6 +89,7 @@
         <img alt="..." id="imagen" src="img/img0.jpg">
 
     </article>
+
     <article class="libros">
         <p class=p1>Curso 2021-2022</p>
         <p class=p2>Libros de texto</p>
@@ -102,17 +101,16 @@
             <img src=img/colegio.jpg>
         </div>
         <aside class="textoImagen">
-            <div class=texto>
-                <h1>Educar para el estudio , la reflexion y la interioridad</h1>
-                <p>Nuestro objetivo es conseguir la formación integral de los alumnos mediante el desarrollo
-                    armónico de todas sus capacidades
-                    físicas, psicológicas , socioculturales y trascendentes.</p>
-                <p>Fomentar en nuestros alumnos un espíritu crítico ante opciones totalizadores de la vida y crear
-                    hábitos de trabajo para poder afrontar nuevas situaciones.</p>
+            <h1>Educar para el estudio , la reflexion y la interioridad</h1>
+            <p>Nuestro objetivo es conseguir la formación integral de los alumnos mediante el desarrollo
+                armónico de todas sus capacidades
+                físicas, psicológicas , socioculturales y trascendentes.</p>
+            <p>Fomentar en nuestros alumnos un espíritu crítico ante opciones totalizadores de la vida y crear
+                hábitos de trabajo para poder afrontar nuevas situaciones.</p>
 
-                <p>Favorecer la enseñanza personalizada y liberadora , para que nuestros alumnos sean ellos mismos
-                    artífices de su propia educación</p>
-                </p>
+            <p>Favorecer la enseñanza personalizada y liberadora , para que nuestros alumnos sean ellos mismos
+                artífices de su propia educación</p>
+            </p>
             </div>
             <div class=imagen3>
                 <img src=img/conocee.jpg>
@@ -127,7 +125,7 @@
             <h1>Guarderia</h1>
             <p>La Escuela Infantil - Chekechea /primer ciclo de Eduación Infantil) consta de 2 cursos en los que
                 atendemos a niños y niñas de 1 y 2 años de edad</p>
-            <div class="botonCursos"><button>Saber mas</button></div>
+            <button class="botonCursos">Saber mas</button>
         </div>
         <div class="infantil">
             <div class="iconoGuarderia"><img src="img/infantil.png">
@@ -135,7 +133,7 @@
             <h1>Infantil</h1>
             <p>El segundo ciclo de Educación Infantil consta de 3 cursos en el que atendemos a niños y niñas desde
                 los 3 a los 5 años de edad</p>
-            <div class="botonCursos"><button>Saber mas</button></div>
+            <button class="botonCursos">Saber mas</button>
         </div>
         <div class="primaria">
             <div class="iconoGuarderia"><img src="img/primaria.png">
@@ -143,7 +141,7 @@
             <h1>Primaria</h1>
             <p>La etapa de Educación Primaria está compuesta por 6 cursos, divididos en dos interniveles en los que
                 atendemos a niños y niñas a partir del curso en el que cumplen los 6 años.</p>
-            <div class="botonCursos"><button>Saber mas</button></div>
+            <button class="botonCursos">Saber mas</button>
         </div>
         <div class="secundaria">
             <div class="iconoGuarderia"><img src="img/secundaria.png">
@@ -151,7 +149,7 @@
             <h1>Secundaria</h1>
             <p>La Educación Secundaria Obligatoria es una etapa educativa de 4 cursos , donde se complementan los
                 conocimientos y se adquieren otras muchas destrezas.</p>
-            <div class="botonCursos"><button>Saber mas</button></div>
+            <button class="botonCursos">Saber mas</button>
         </div>
 
         <div class="bachiller">
@@ -161,7 +159,7 @@
 
             <p>El Bachillerato comprende dos cursos académicos. Nuestro Colegio ofrece los estudios de Bachillerato
                 las modalidades de : humanidades , ciencias sociales y ciencias.</p>
-            <div class="botonCursos"><button>Saber mas</button></div>
+            <button class="botonCursos">Saber mas</button>
         </div>
     </article>
     <article class=galeriaImagenes>
@@ -181,9 +179,8 @@
 
     </article>
     <h1 class=titulo1>Qué te ofrecemos</h1>
-    <article class="row">
-        <div class="col col-25 tienda">
-
+    <article class="primeraF">
+        <div class="tienda">
             <div class="iconoOfrecimientos">
                 <img src="img/tienda.png">
             </div>
@@ -194,10 +191,9 @@
             <p class="ofrecimientos">Accede cómodamente desde tu casa a nuestra tienda online para conocer los
                 materiales
                 escolares que necesita tu hijo</p>
-            <div class="botonCursos"><button>Saber mas</button></div>
-
+            <button class="botonCursos">Saber mas</button>
         </div>
-        <div class="col col-25 innovacion">
+        <div class="innovacion">
 
             <div class="iconoOfrecimientos"><img src="img/bombilla.png">
             </div>
@@ -205,10 +201,10 @@
             <p class="ofrecimientos">Permite una comunicación abierta entre profesores, alumnos y familiares que
                 cohesiona la
                 comunidad educativa y el aprendizaje innovador personalizado</p>
-            <div class="botonCursos"><button>Saber mas</button></div>
+            <button class="botonCursos">Saber mas</button>
 
         </div>
-        <div class="col col-25 madrugadores">
+        <div class="madrugadores">
 
             <div class="iconoOfrecimientos"><img src="img/reloj.png">
             </div>
@@ -216,35 +212,31 @@
             <p class="ofrecimientos">Desde el Colegio ofrecemos de lunes a viernes , como apoyo a la familia y
                 conciliación de la
                 vida laboral</p>
-            <div class="botonCursos"><button>Saber mas</button></div>
+            <button class="botonCursos">Saber mas</button>
 
         </div>
-        <div class="col col-25 comedor">
-            <div class="">
-                <div class="iconoOfrecimientos"><img src="img/plato.png">
-                </div>
-                <h1 class="tituloOfrece">Comedor escolar</h1>
-                <p class="ofrecimientos">El Colegio dispone de servicio de comedor y la empresa que atiende este
-                    servicio es ARAMARK.
-                    la Administración del Colegio es la vía de enlace</p>
-                <div class="botonCursos"><button>Saber mas</button></div>
+        <div class="comedor">
+            <div class="iconoOfrecimientos"><img src="img/plato.png">
             </div>
+            <h1 class="tituloOfrece">Comedor escolar</h1>
+            <p class="ofrecimientos">El Colegio dispone de servicio de comedor y la empresa que atiende este
+                servicio es ARAMARK.
+                la Administración del Colegio es la vía de enlace</p>
+            <button class="botonCursos">Saber mas</button>
         </div>
     </article>
 
-    <article class="row">
-        <div class="col col-25 actividades">
-
+    <article class="segundaF">
+        <div class="actividades">
             <div class="iconoOfrecimientos"><img src="img/futbol.png">
             </div>
             <h1 class="tituloOfrece">Actividades extraescolares</h1>
             <p class="ofrecimientos">Ofertamos diversas actividades extraescolares tanto educativas como deportivas.
                 Entre ellas
                 ofrecemos un club deportivo y una escuela de idiomas</p>
-            <div class="botonCursos"><button>Saber mas</button></div>
-
+            <button class="botonCursos">Saber mas</button>
         </div>
-        <div class="col col-25 pastoral">
+        <div class="pastoral">
 
             <div class="iconoOfrecimientos"><img src="img/cruz2.png">
             </div>
@@ -253,10 +245,10 @@
                 , la libertad ,
                 gratuidad y todo aquello que nos invita a vivir en las familias , parroquia , en el
                 colegio... en la vida.</p>
-            <div class="botonCursos"><button>Saber mas</button></div>
+            <button class="botonCursos">Saber mas</button>
 
         </div>
-        <div class="col col-25 bilinguismo">
+        <div class="bilinguismo">
 
             <div class="iconoOfrecimientos"><img src="img/bilinguismo.png">
             </div>
@@ -264,18 +256,17 @@
             <p class="ofrecimientos">Ayuda a conocer varias culturas que auidará a su progreso como personas
                 tolerantes y abiertas
                 respecto al mundo que les rodea</p>
-            <div class="botonCursos"><button>Saber mas</button></div>
+            <button class="botonCursos">Saber mas</button>
 
         </div>
-        <div class="col col-25 plataforma">
-
+        <div class="plataforma">
             <div class="iconoOfrecimientos"><img src="img/portatil.png">
             </div>
             <h1 class="tituloOfrece">Plataforma educativa</h1>
             <p class="ofrecimientos">Permite una comunicación abierta entre profesores, alumnos y familiares que
                 cohesiona la
                 comunidad educativa y el aprendizaje innovador personalizado</p>
-            <div class="botonCursos"><button>Saber mas</button></div>
+            <button class="botonCursos">Saber mas</button>
 
         </div>
     </article>

@@ -1,3 +1,4 @@
+let posicionActual = 0;
 window.onload = function () {
     const IMAGENES = [
         'img/img0.jpg',
@@ -53,23 +54,13 @@ window.onload = function () {
     for (var i = 0; i < elements.length; i++) {
         elements[i].addEventListener("click", function () {
             document.getElementById("imagen").src = elements[this.id].src;
-            if (this.id == img0) {
-                posicionActual = 0
-            } else if (this.id == img1) {
-                posicionActual = 1
-            } else if (this.id == img2) {
-                posicionActual = 2
-            } else if (this.id == img3) {
-                posicionActual = 3
-            } else if (this.id == img4) {
-                posicionActual = 4
-            }
+            posicionActual = this.id;
         }
         )
     }
 }
 
-function myFunction() {
+function menuDesplegable() {
     var x = document.getElementById("menu");
     if (x.className === "menu") {
         x.className += " responsive";

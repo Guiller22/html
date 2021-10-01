@@ -7,15 +7,18 @@ $letraSerif: sans-serif;
     margin-left: auto;
     margin-right: auto;
 }
-.contenido {
-    display: flex;
-    padding-left: 40px;
-    flex-direction: row;
-}
-@media screen and (max-width: 900px) {
-    .contenido {
-        display: flex;
-        flex-direction: column;
+
+@media screen and (max-width: 950px) {
+    #barraSuperior {
+        padding-left: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        .parteIzquierda{
+            margin-top: 10px;
+                display: flex;
+                flex-direction: column !important;
+                align-items: center !important;
+        }
     }
 }
 #imagen {
@@ -24,9 +27,12 @@ $letraSerif: sans-serif;
 @media screen and (max-width: 900px) {
     .imagen2 {
         width: 100% !important;
+        img {
+            padding-right: 0px !important;
+        }
     }
     .textoImagen {
-        width: 100% !important;
+        width: 90% !important;
         .imagen3 {
             position: relative !important;
         }
@@ -35,40 +41,29 @@ $letraSerif: sans-serif;
 .imagen3 img {
     width: 100%;
 }
+
 #barraSuperior {
     background-color: $rojo;
     color: white;
     font-family: $letraSerif;
-    .contenido {
+    display: flex;
+    padding-left: 40px;
+    flex-direction: row;
+    .parteIzquierda {
         display: flex;
-        padding-left: 40px;
         flex-direction: row;
-        .direccion {
-            margin-top: 5px;
-            display: inline-flex;
-            p {
-                margin-top: 4px;
-            }
-        }
-        .correo {
-            margin-top: 5px;
-            display: inline-flex;
-            p {
-                margin-top: 4px;
-            }
-        }
+        align-items: center;
+        .direccion,
+        .p,
+        .correo,
         .telefono {
             display: inline-flex;
-            margin-top: 5px;
-            p {
-                margin-top: 4px;
-            }
         }
-        .redes {
-            display: inline-flex;
-            margin-top: 5px;
-            padding-bottom: 10px;
-        }
+    }
+    .redes {
+        display: inline-flex;
+        margin-top: 7px;
+        padding-bottom: 10px;
     }
 }
 .fa {
@@ -107,17 +102,14 @@ $letraSerif: sans-serif;
     color: #d91616;
     background-color: white;
 }
+img {
+    width: 25%;
+}
 .contenedor {
     display: flex;
     font-weight: bold;
 
     align-items: center;
-    .contenedor .nombre {
-        padding: 20px;
-        img {
-            width: 50%;
-        }
-    }
     .menu {
         a {
             text-decoration: none;
@@ -129,6 +121,7 @@ $letraSerif: sans-serif;
             background-color: #50c9fd;
             color: white;
             padding: 8px;
+            margin-bottom: 10px;
         }
         .icon {
             display: none;
@@ -182,6 +175,18 @@ $letraSerif: sans-serif;
         }
     }
 }
+@media screen and (max-width: 775px) {
+    .carousel-indicators {
+        left: 30% !important;
+
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 500px) {
+    .carousel-indicators {
+        display: none !important;
+    }
+}
 .titulo1 {
     color: $rojo;
     text-align: center;
@@ -213,21 +218,14 @@ $letraSerif: sans-serif;
         width: 50%;
         text-align: justify;
         position: relative;
-        .texto {
-
-            h1 {
-                color: #50c9fd;
-                position: relative;
-                font-size: xxx-large;
-            }
-            .imagen3 {
-                position: absolute;
-                bottom: 0;
-                
-            }
+        h1 {
+            color: #50c9fd;
+            position: relative;
+            font-size: xxx-large;
         }
     }
 }
+
 .etapas {
     display: flex;
     flex-direction: row;
@@ -236,6 +234,8 @@ $letraSerif: sans-serif;
         flex-direction: column;
         text-align: center;
         width: 20%;
+        justify-content: space-evenly;
+        align-items: center;
         img {
             width: 30%;
         }
@@ -246,6 +246,8 @@ $letraSerif: sans-serif;
         text-align: center;
         width: 20%;
         border-right: 2px rgba(121, 121, 121, 0.5) dashed;
+        justify-content: space-evenly;
+        align-items: center;
         img {
             width: 30%;
         }
@@ -257,6 +259,8 @@ $letraSerif: sans-serif;
         width: 20%;
         border-left: 2px rgba(121, 121, 121, 0.5) dashed;
         border-right: 2px rgba(121, 121, 121, 0.5) dashed;
+        justify-content: space-evenly;
+        align-items: center;
         img {
             width: 30%;
         }
@@ -267,6 +271,8 @@ $letraSerif: sans-serif;
         text-align: center;
         width: 20%;
         border-right: 2px rgba(121, 121, 121, 0.5) dashed;
+        justify-content: space-evenly;
+        align-items: center;
         img {
             width: 30%;
         }
@@ -276,6 +282,8 @@ $letraSerif: sans-serif;
         flex-direction: column;
         text-align: center;
         width: 20%;
+        justify-content: space-evenly;
+        align-items: center;
         img {
             width: 30%;
         }
@@ -283,17 +291,17 @@ $letraSerif: sans-serif;
 }
 .botonCursos {
     padding-bottom: 5px;
-    button {
-        background-color: #117fad !important;
-        border-radius: 10px;
-        color: white;
-        font-size: 17px;
-        font-family: "Source Sans Pro", sans-serif;
-        padding: 6px 18px;
-        text-decoration: none;
-        border: none;
-    }
+    background-color: #117fad !important;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 6px 18px;
+    text-decoration: none;
+    border: none;
+    margin-bottom: 7px;
 }
+
 @media screen and (max-width: 950px) {
     .etapas {
         display: flex;
@@ -331,6 +339,21 @@ $letraSerif: sans-serif;
         flex: 2;
     }
 }
+@media screen and (max-width: 600px) {
+    .galeriaImagenes {
+        img {
+            width: 100% !important;
+        }
+    }
+}
+.primeraF {
+    display: flex;
+    flex-direction: row;
+}
+.segundaF {
+    display: flex;
+    flex-direction: row;
+}
 .col {
     flex-basis: 100%;
     text-align: center;
@@ -349,27 +372,143 @@ $letraSerif: sans-serif;
     padding: 5px;
     margin: 10px;
 }
-@media screen and (min-width: 980px) {
-    .row {
+.iconoOfrecimientos {
+    margin-top: 7px;
+}
+
+@media screen and (max-width: 950px) {
+    .primeraF {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: nowrap;
+        padding: 20px;
+        text-align: center;
+        font-size: larger;
+        .tienda,
+        .innovacion,
+        .madrugadores,
+        .comedor {
+            width: 100% !important;
+            margin-bottom: 10px !important;
+            margin-top: 10px !important;
+        }
     }
-    .col-25 {
-        flex: 2.5;
+    .actividades {
+        background-color: rgba(153, 153, 153, 0.2);
     }
+    .pastoral {
+        background-color: white !important;
+    }
+    .bilinguismo {
+        background-color: rgba(153, 153, 153, 0.2);
+    }
+    .plataforma {
+        background-color: white !important;
+    }
+    .segundaF {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 20px;
+        text-align: center;
+        font-size: larger;
+        .actividades,
+        .pastoral,
+        .plataforma,
+        .bilinguismo {
+            width: 100% !important;
+            margin-bottom: 10px !important;
+            margin-top: 10px !important;
+        }
+    }
+}
+.innovacion {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.comedor {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .madrugadores {
     background-color: rgba(153, 153, 153, 0.2);
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .pastoral {
     background-color: rgba(153, 153, 153, 0.2);
+    width: 25%;
 }
 .plataforma {
     background-color: rgba(153, 153, 153, 0.2);
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .tienda {
     background-color: rgba(153, 153, 153, 0.2);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.actividades {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.pastoral {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.bilinguismo {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.plataforma {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media screen and (max-width: 500px) {
+    .contenedorImagen {
+        flex-direction: column !important;
+    }
+    .ant,
+    .sig {
+        display: none !important;
+    }
 }
 .contenedorImagen {
     width: 90%;
@@ -422,6 +561,63 @@ $letraSerif: sans-serif;
         margin-top: 5px;
     }
 }
+.color {
+    background-color: white !important;
+    color: #117fad;
+}
+@media screen and (max-width: 600px) {
+    .informacion1 {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 40px;
+        width: 100%;
+        .contenido1 {
+            width: 80%;
+            text-align: center;
+        }
+        .formulario {
+            width: 100%;
+            padding-left: 0 !important;
+            text-align: center;
+        }
+    }
+}
+@media screen and(max-width:600px) {
+    .ant,
+    .sig {
+        bottom: 200px;
+        right: 0;
+    }
+}
+@media screen and(max-width:600px) {
+    footer {
+        height: 600px !important;
+        padding-right: 20px !important;
+        .redesFooter {
+            width: 100% !important;
+            font-size: larger;
+            padding-left: 0 !important;
+        }
+        .redes3 {
+            position: relative !important;
+            right: 0 !important;
+        }
+        .reconocimientos {
+            width: 100% !important;
+        }
+        .servicios,
+        .etapasFooter {
+            display: none;
+        }
+        .copy {
+            position: relative !important;
+            padding-left: 0 !important;
+            padding-bottom: 0px !important;
+            padding: 10px;
+        }
+    }
+}
+
 .formulario {
     width: 50%;
     padding-left: 10px;
@@ -464,21 +660,16 @@ footer {
     color: white;
     height: 400px;
     position: relative;
-    .redesFooter {
-        width: 25%;
-        float: left;
-        padding-left: 15px;
-    }
+    padding-left: 50px;
+    .redesFooter,
+    .etapasFooter,
+    .servicios,
     .reconocimientos {
         width: 25%;
         float: left;
         .imagenes img {
             width: 45%;
         }
-    }
-    .servicios {
-        float: right;
-        width: 25%;
     }
     .copy {
         position: absolute;
@@ -490,8 +681,9 @@ footer {
         position: absolute;
         bottom: 0;
         display: inline-flex;
-        padding-bottom: 20px;
-        right: 40px;
+
+        padding-bottom: 30px;
+        right: 100px;
     }
 }
 @media screen and (max-width: 900px) {
@@ -501,9 +693,12 @@ footer {
         text-align: center;
     }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 920px) {
     footer {
-        height: 1200px !important;
+        height: 1200px;
+        .redes3 {
+            right: 0 !important;
+        }
     }
 }
 @media screen and (max-width: 950px) {
@@ -512,11 +707,6 @@ footer {
     }
     .menu .icon {
         display: block !important;
-    }
-    .botonArriba {
-        margin-top: 10px;
-        position: relative !important;
-        left: 0%;
     }
 }
 @media screen and (max-width: 950px) {
@@ -534,21 +724,7 @@ footer {
         text-align: left;
     }
 }
-@media screen and (max-width: 980px) {
-    .col.col-25.actividades {
-        background-color: rgba(153, 153, 153, 0.2);
-    }
-    .col.col-25.pastoral {
-        background-color: white;
-    }
-    .col.col-25.bilinguismo {
-        background-color: rgba(153, 153, 153, 0.2);
-    }
-    .col.col-25.plataforma {
-        background-color: white;
-    }
-}
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1220px) {
     .libros {
         background: rgba(153, 153, 153, 0.1);
         display: flex;
@@ -557,16 +733,20 @@ footer {
         align-content: center;
         align-items: center;
         padding: 20px;
-        .p1{
-            left:0;
+        .p1 {
+            left: 0;
             right: 0;
             position: relative !important;
         }
-        .p2{
-            left:0;
+        .p2 {
+            left: 0;
             right: 0;
             position: relative !important;
-
+        }
+        .botonArriba {
+            margin-top: 10px;
+            position: relative !important;
+            left: 0%;
         }
     }
 }
