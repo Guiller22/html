@@ -6,7 +6,9 @@ window.onload = function () {
         'img/img2.jpg',
         'img/img3.jpg',
         'img/img4.jpg',
+        
     ];
+
     let posicionActual = 0;
     let $botonRetroceder = document.querySelector('#anterior');
     let $botonAvanzar = document.querySelector('#siguiente');
@@ -36,12 +38,7 @@ window.onload = function () {
 
 
     function playIntervalo() {
-        intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
-        $botonAvanzar.setAttribute('disabled', true);
-        $botonRetroceder.setAttribute('disabled', true);
-        $botonPlay.setAttribute('disabled', true);
-        $botonStop.removeAttribute('disabled');
-
+        intervalo = setInterval(pasarFoto, 1000);
     }
 
 
