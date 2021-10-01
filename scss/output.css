@@ -382,7 +382,7 @@ img {
   margin-top: 7px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   .primeraF {
     display: flex;
     flex-direction: column;
