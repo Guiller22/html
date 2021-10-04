@@ -1,4 +1,5 @@
 let posicionActual = 0;
+
 window.onload = function () {
     const IMAGENES = [
         'img/img0.jpg',
@@ -6,14 +7,15 @@ window.onload = function () {
         'img/img2.jpg',
         'img/img3.jpg',
         'img/img4.jpg',
-        
-    ];
 
+    ];
+    let intervalo;
+    intervalo = setInterval(pasarFoto, 5000);
     let posicionActual = 0;
     let $botonRetroceder = document.querySelector('#anterior');
     let $botonAvanzar = document.querySelector('#siguiente');
     let $imagen = document.querySelector('#imagen');
-    let intervalo;
+
 
     function pasarFoto() {
         if (posicionActual >= IMAGENES.length - 1) {
@@ -36,22 +38,25 @@ window.onload = function () {
     }
 
 
-
-    function playIntervalo() {
-        intervalo = setInterval(pasarFoto, 1000);
-    }
-
-
     $botonAvanzar.addEventListener('click', pasarFoto);
+    $botonAvanzar.onclick = function () {
+        clearTimeout(intervalo);
+        intervalo = setInterval(pasarFoto, 5000);
+    }
     $botonRetroceder.addEventListener('click', retrocederFoto);
-
+    $botonRetroceder.onclick = function () {
+        clearTimeout(intervalo);
+        intervalo = setInterval(pasarFoto, 5000);
+    }
 
 
     var elements = document.getElementsByClassName('imagenesc');
     for (var i = 0; i < elements.length; i++) {
         elements[i].addEventListener("click", function () {
+            clearTimeout(intervalo);
             document.getElementById("imagen").src = elements[this.id].src;
             posicionActual = this.id;
+            intervalo = setInterval(pasarFoto, 5000);
         }
         )
     }
